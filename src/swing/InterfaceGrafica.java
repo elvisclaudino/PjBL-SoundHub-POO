@@ -1,6 +1,7 @@
 package swing;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 
 public class InterfaceGrafica {
@@ -21,7 +22,7 @@ public class InterfaceGrafica {
         JPanel painel =  new JPanel();
         //centraliaza os componentes do painel
         painel.setLayout(new GridBagLayout());
-        //define q fica um componetne embaixo do outro
+        //painel.setLayout(new GridBagLayout());
 
 
         //um componente label representa um texto no interface
@@ -32,10 +33,36 @@ public class InterfaceGrafica {
         JTextField nomeField = new JTextField(10);
         painel.add(nomeField);
 
+        //define a criação de uma caixa de seleção
+        JComboBox tipoUsuario = new JComboBox();
+        //define como uma opção
+        tipoUsuario.addItem("Selecione");
+        tipoUsuario.addItem("Ouvinte");
+        tipoUsuario.addItem("Artista");
+        //adiciona ao frame
+        painel.add(tipoUsuario);
+
+        JComboBox sexo = new JComboBox();
+        sexo.addItem("Selecione");
+        sexo.addItem("Masculino");
+        sexo.addItem("Feminino");
+        sexo.addItem("Outro");
+        painel.add(sexo);
+
         JLabel senhaLabel = new JLabel("Digite sua senha");
         painel.add(senhaLabel);
         JTextField senhaField = new JTextField(10);
         painel.add(senhaField);
+
+        JLabel idadeLabel = new JLabel("Insira sua idade");
+        painel.add(idadeLabel);
+        JTextField idadeField = new JTextField(10);
+        painel.add(idadeField);
+
+        JLabel nacionalidadeLabel = new JLabel("Insira sua nacionalidade");
+        painel.add(nacionalidadeLabel);
+        JTextField nacionalidadeField = new JTextField(10);
+        painel.add(nacionalidadeField);
 
 
         //cria o botao
