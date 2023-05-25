@@ -1,4 +1,6 @@
-public class Album {
+import java.util.ArrayList;
+public class Album implements Add {
+    private ArrayList<Musica> listaMusicas;
     private String nome;
     private String generoMusical;
     private float duracao;
@@ -12,7 +14,24 @@ public class Album {
         this.dataLancamento = dataLancamento;
         this.artista = artista;
     }
+    public void adicionarAlbum(Musica musica) {
+        listaMusicas.add(musica);
+    }
 
+    @Override
+    public void adicionarMusica(Musica musica) {
+
+    }
+
+    @Override
+    public ArrayList<Musica> obterListaMusicas() {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Album> obterAlbumMusicas() {
+        return null;
+    }
 
     public String getNome(){
         return nome;
