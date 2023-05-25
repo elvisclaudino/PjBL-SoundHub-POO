@@ -1,14 +1,15 @@
-public class Ouvinte {
-    private String plano;
+import java.util.ArrayList;
 
-    public void plano() {
-        this.plano = plano;
+public class Ouvinte extends Usuario{
+    private ArrayList<Lista> playlists;
+    public Ouvinte(String nome, int idade, String genero, String nacionalidade) {
+        super(nome, idade, genero, nacionalidade);
     }
 
-    public String getPlano() {
-        return plano;
+    public void adicionarPlaylist(Lista playlist) {
+        playlists.add(playlist);
     }
-
-    
-
+    public void removerPlaylist(Lista playlist) {
+        playlists.remove(playlist);
+    }
 }
