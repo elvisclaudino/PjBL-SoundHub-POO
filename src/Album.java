@@ -28,11 +28,6 @@ public class Album implements Add {
         return null;
     }
 
-    @Override
-    public ArrayList<Album> obterAlbumMusicas() {
-        return null;
-    }
-
     public String getNome(){
         return nome;
     }
