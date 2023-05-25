@@ -10,4 +10,8 @@ public abstract class Usuario {
         this.genero = genero;
         this.nacionalidade = nacionalidade;
     }
+
+    public String getNome() {
+        return nome;
+    }
 }

@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.List;
 
-public class Playlist {
+public class Playlist implements Add{
     private String nome;
-    private List<Musica> musicas;
+    private ArrayList<Musica> musicas;
 
     public Playlist(String nome) {
         this.nome = nome;
@@ -18,8 +17,15 @@ public class Playlist {
         musicas.remove(musica);
     }
 
-    public List<Musica> getMusicas() {
+    @Override
+    public ArrayList<Musica> obterListaMusicas() {
         return musicas;
+    }
+
+
+    @Override
+    public String getNome() {
+        return nome;
     }
 
 }

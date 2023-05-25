@@ -1,15 +1,16 @@
 import java.util.ArrayList;
 
 public class Ouvinte extends Usuario{
-    private ArrayList<Lista> playlists;
+    private ArrayList<Playlist> playlists;
     public Ouvinte(String nome, int idade, String genero, String nacionalidade) {
         super(nome, idade, genero, nacionalidade);
+        playlists = new ArrayList<>();
     }
 
-    public void adicionarPlaylist(Lista playlist) {
+    public void adicionarPlaylist(Playlist playlist) {
         playlists.add(playlist);
     }
-    public void removerPlaylist(Lista playlist) {
+    public void removerPlaylist(Playlist playlist) {
         playlists.remove(playlist);
     }
 }
