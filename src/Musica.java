@@ -1,25 +1,24 @@
 public class Musica {
-
     private String nome;
-    private String artista;
+    private Artista artista;
+    private int duracao;
     private String genero;
-    private float duracao;
+    private int anoLancamento;
 
-    private String dataLancamento;
-
-    public Musica(String nome, String artista, String genero, float duracao, String dataLancamento){
+    public Musica(String nome, Artista artista, int duracao, String genero, int anoLancamento) {
         this.nome = nome;
         this.artista = artista;
-        this.genero = genero;
         this.duracao = duracao;
-        this.dataLancamento = dataLancamento;
+        this.genero = genero;
+        this.anoLancamento = anoLancamento;
     }
 
-    public String getNome(){
+    public String getNome() {
         return nome;
     }
 
-    public String getArtista(){
+    public Artista getArtista() {
         return artista;
     }
 }
+

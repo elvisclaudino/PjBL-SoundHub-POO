@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class playlist {
+public class Playlist {
     private String nome;
     private List<Musica> musicas;
 
-    public playlist(String nome) {
+    public Playlist(String nome) {
         this.nome = nome;
         this.musicas = new ArrayList<>();
     }

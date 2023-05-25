@@ -19,11 +19,6 @@ public class Lista implements Add{
     }
 
     @Override
-    public ArrayList<Album> obterAlbumMusicas() {
-        return null;
-    }
-
-    @Override
     public String getNome() {
         return nome;
     }
