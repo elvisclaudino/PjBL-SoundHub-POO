@@ -1,7 +1,7 @@
+import java.util.ArrayList;
+
 public interface Add {
-   void addMusica();
-   String getMusica();
+   void adicionarMusica(Musica musica);
+   ArrayList<Musica> obterListaMusicas();
    String getNome();
-   void addPlaylist();
-   void addAlbum();
 }
