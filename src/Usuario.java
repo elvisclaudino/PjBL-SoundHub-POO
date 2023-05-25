@@ -1,4 +1,4 @@
-public abstract class Usuario implements Add {
+public abstract class Usuario {
     private String nome;
     private int idade;
     private String genero;
