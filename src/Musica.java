@@ -4,6 +4,7 @@ public class Musica {
     private String artista;
     private String genero;
     private float duracao;
+
     private String dataLancamento;
 
     public Musica(String nome, String artista, String genero, float duracao, String dataLancamento){
