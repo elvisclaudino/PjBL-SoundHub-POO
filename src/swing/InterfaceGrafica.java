@@ -62,8 +62,9 @@ public class InterfaceGrafica {
         nacionalidadeField.setMaximumSize(new Dimension(300, nacionalidadeField.getPreferredSize().height)); // seta um tamanho para os campos de texto
 
         JButton botao = new JButton("Criar Usuário"); // cria o botao para criar o usuario
-        botao.setBackground(new Color(201, 201, 201)); // cor personalizada para o botao
-
+        botao.setBackground(new Color(201, 201, 201)); // cor personalizada para o bot  ao
+        BotaoAction action = new BotaoAction(); //cria o objeto q vai fazer a escuta
+        botao.addActionListener(action); //fica observando quando o botão for ativado
 
         //As propriedades gridx e gridy dessa classe representam a posição da célula onde o componente será colocado.
 
