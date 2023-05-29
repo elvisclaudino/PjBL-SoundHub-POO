@@ -1,12 +1,16 @@
 import java.util.ArrayList;
 
-public class Playlist implements Add{
-    private String nome;
+public class Playlist extends Conteudo{
+    private Ouvinte ouvinte;
     private ArrayList<Musica> musicas;
 
-    public Playlist(String nome) {
-        this.nome = nome;
+    private int duracao;
+
+    public Playlist(String nome, String genero, int anoDeLancamento, Ouvinte ouvinte) {
+        super(nome, genero, anoDeLancamento);
+        this.ouvinte = ouvinte;
         this.musicas = new ArrayList<>();
+        this.duracao = 0;
     }
 
     public void adicionarMusica(Musica musica) {
@@ -22,10 +26,17 @@ public class Playlist implements Add{
         return musicas;
     }
 
-
     @Override
-    public String getNome() {
-        return nome;
+    public void setDuracao() {
+        int duracao = 0;
+        for (Musica musica : obterListaMusicas()) {
+            duracao += musica.getDuracao();
+        }
+        this.duracao = duracao;
     }
 
+    @Override
+    public int getDuracao() {
+        return duracao;
+    }
 }

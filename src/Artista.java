@@ -8,12 +8,13 @@ public class Artista extends Usuario{
         super(nome, idade, genero, nacionalidade);
         this.generoMusical = generoMusical;
         this.apelido = apelido;
+        albums = new ArrayList<>();
     }
 
-    public void adicionarPlaylist(Album album) {
+    public void adicionarAlbum(Album album) {
         albums.add(album);
     }
-    public void removerPlaylist(Album album) {
+    public void removerAlbum(Album album) {
         albums.remove(album);
     }
 }
