@@ -20,12 +20,14 @@ public class Main {
         System.out.println("Playlist: " + playlist1.getNome());
         System.out.println("Músicas da playlist:");
         for (Musica musica : playlist1.obterListaMusicas()) {
-            System.out.println("- " + musica.getNome());
+            System.out.println("- " + musica.getNome() + " - " + musica.getDuracao() + "s");
         }
         playlist1.setDuracao();
         System.out.println("Duração da playlist: " + playlist1.getDuracao() + " segundos");
 
-        System.out.println("Usuário: " + album1.getNome());
+        System.out.println();
+
+        System.out.println("Artista: " + artista1.getNome());
         System.out.println("Playlist: " + album1.getNome());
         System.out.println("Músicas do album:");
         for (Musica musica : album1.obterListaMusicas()) {

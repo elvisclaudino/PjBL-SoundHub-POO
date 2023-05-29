@@ -1,54 +1,35 @@
 import java.util.ArrayList;
-public class Album implements Add {
-    private ArrayList<Musica> listaMusicas;
-    private String nome;
-    private String generoMusical;
-    private float duracao;
-    private String dataLancamento;
-    private String artista;
+public class Album extends Conteudo {
+    private ArrayList<Musica> musicas;
+    private int duracao;
+    private Artista artista;
 
-    public Album(String nome, String generoMusical, float duracao, String dataLancamento, String artista){
-        this.nome = nome;
-        this.generoMusical = generoMusical;
-        this.duracao = duracao;
-        this.dataLancamento = dataLancamento;
+    public Album(String nome, String generoMusical, int anoDeLancamento, Artista artista){
+        super(nome, generoMusical, anoDeLancamento);
         this.artista = artista;
+        this.musicas = new ArrayList<>();
+        this.duracao = 0;
     }
-    public void adicionarAlbum(Musica musica) {
-        listaMusicas.add(musica);
-    }
-
-    @Override
     public void adicionarMusica(Musica musica) {
-
+        musicas.add(musica);
     }
 
     @Override
     public ArrayList<Musica> obterListaMusicas() {
-        return null;
+        return musicas;
     }
 
     @Override
-    public ArrayList<Album> obterAlbumMusicas() {
-        return null;
+    public void setDuracao() {
+        int duracao = 0;
+        for (Musica musica : obterListaMusicas()) {
+            duracao += musica.getDuracao();
+        }
+        this.duracao = duracao;
     }
 
-    public String getNome(){
-        return nome;
-    }
-
-    public String getGeneroMusical() {
-        return generoMusical;
-    }
-    public float getDuracao() {
+    @Override
+    public int getDuracao() {
         return duracao;
-    }
-
-    public String getDataLancamento() {
-        return dataLancamento;
-    }
-
-    public String getArtista() {
-        return artista;
     }
 }
