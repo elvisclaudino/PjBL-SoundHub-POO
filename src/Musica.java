@@ -17,6 +17,10 @@ public class Musica {
         return nome;
     }
 
+    public int getDuracao() {
+        return duracao;
+    }
+
     public Artista getArtista() {
         return artista;
     }
