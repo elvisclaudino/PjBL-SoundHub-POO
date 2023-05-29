@@ -1,80 +1,94 @@
-package swing;
-
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 
 public class InterfaceGrafica {
     public static void main(String[] args) {
-        //declara o jframe para criar a janela
+        // Declara o JFrame para criar a janela
         JFrame janela = new JFrame();
-        // seta o titulo da janela
         janela.setTitle("Registrar Usuario - SoundHub -");
-        //seta a largura e altura da janela
-        janela.setSize(600,600);
-        //seta a localização da janela
-        janela.setLocation(500,300);
-        //declara q ao fechar a janela o codigo para
+        janela.setSize(400, 400);
+        janela.setLocation(500, 300);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        int espacamentoVertical = 10; //seta o tamanho do espaçamento
 
 
-        //cria o painel(um componente invisivel que nois usa para agrupar outros componentes dentro dle)
-        JPanel painel =  new JPanel();
-        //centraliaza os componentes do painel
-        painel.setLayout(new GridBagLayout());
-        //painel.setLayout(new GridBagLayout());
+        // Cria o painel
+        JPanel painel = new JPanel();
+        painel.setLayout(new BoxLayout(painel, BoxLayout.Y_AXIS));
+        painel.setAlignmentX(Component.LEFT_ALIGNMENT);
 
-
-        //um componente label representa um texto no interface
-        JLabel nomeLabel = new JLabel("Digite seu nome de usuario");
-        //adiciona ao painel o componente label
-        painel.add(nomeLabel);
-        //cria a caixa de texto pro usuario digitar e seta o numero de colunas
+        // Componentes
+        JLabel nomeLabel = new JLabel("Digite seu nome de usuário");
         JTextField nomeField = new JTextField(10);
-        painel.add(nomeField);
+        nomeField.setMaximumSize(new Dimension(200, nomeField.getPreferredSize().height)); //seta um tamanho para os campos de texto
 
-        //define a criação de uma caixa de seleção
+
         JComboBox tipoUsuario = new JComboBox();
-        //define como uma opção
         tipoUsuario.addItem("Selecione");
         tipoUsuario.addItem("Ouvinte");
         tipoUsuario.addItem("Artista");
-        //adiciona ao frame
-        painel.add(tipoUsuario);
+        Dimension comboSize = tipoUsuario.getPreferredSize();
+        comboSize.width = 200;
+        comboSize.height = tipoUsuario.getPreferredSize().height;
+        tipoUsuario.setPreferredSize(comboSize);
+        tipoUsuario.setMaximumSize(comboSize);
 
         JComboBox sexo = new JComboBox();
         sexo.addItem("Selecione");
         sexo.addItem("Masculino");
         sexo.addItem("Feminino");
         sexo.addItem("Outro");
-        painel.add(sexo);
+        comboSize = sexo.getPreferredSize();
+        comboSize.width = 200;
+        comboSize.height = sexo.getPreferredSize().height;
+        sexo.setPreferredSize(comboSize);
+        sexo.setMaximumSize(comboSize);
 
         JLabel senhaLabel = new JLabel("Digite sua senha");
-        painel.add(senhaLabel);
         JTextField senhaField = new JTextField(10);
-        painel.add(senhaField);
+        senhaField.setMaximumSize(new Dimension(200, senhaField.getPreferredSize().height)); //seta um tamanho para os campos de texto
+
 
         JLabel idadeLabel = new JLabel("Insira sua idade");
-        painel.add(idadeLabel);
         JTextField idadeField = new JTextField(10);
-        painel.add(idadeField);
+        idadeField.setMaximumSize(new Dimension(200, idadeField .getPreferredSize().height)); //seta um tamanho para os campos de texto
+
 
         JLabel nacionalidadeLabel = new JLabel("Insira sua nacionalidade");
-        painel.add(nacionalidadeLabel);
         JTextField nacionalidadeField = new JTextField(10);
+        nacionalidadeField.setMaximumSize(new Dimension(200, nacionalidadeField.getPreferredSize().height)); //seta um tamanho para os campos de texto
+
+
+        JButton botao = new JButton("Criar Usuário");
+        botao.setBackground(new Color(201, 201, 201));
+
+        // Adiciona os componentes ao painel
+        painel.add(nomeLabel);
+        painel.add(Box.createVerticalStrut(espacamentoVertical)); // cria um espaçamento entre os campos
+        painel.add(nomeField);
+        painel.add(Box.createVerticalStrut(espacamentoVertical));
+        painel.add(tipoUsuario);
+        painel.add(Box.createVerticalStrut(espacamentoVertical));
+        painel.add(sexo);
+        painel.add(Box.createVerticalStrut(espacamentoVertical));
+        painel.add(senhaLabel);
+        painel.add(Box.createVerticalStrut(espacamentoVertical));
+        painel.add(senhaField);
+        painel.add(Box.createVerticalStrut(espacamentoVertical));
+        painel.add(idadeLabel);
+        painel.add(Box.createVerticalStrut(espacamentoVertical));
+        painel.add(idadeField);
+        painel.add(Box.createVerticalStrut(espacamentoVertical));
+        painel.add(nacionalidadeLabel);
+        painel.add(Box.createVerticalStrut(espacamentoVertical));
         painel.add(nacionalidadeField);
-
-
-        //cria o botao
-        JButton botao = new JButton("Criar Usuario");
+        painel.add(Box.createVerticalStrut(espacamentoVertical));
         painel.add(botao);
+        painel.add(Box.createVerticalStrut(espacamentoVertical));
 
-
-
-        //adiciona o painel a janela
+        // Adiciona o painel à janela
         janela.add(painel);
-        //delcara q a janela é visivel
         janela.setVisible(true);
     }
-
 }

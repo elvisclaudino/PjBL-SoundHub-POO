@@ -22,6 +22,11 @@ public class Playlist implements Add{
         return musicas;
     }
 
+    @Override
+    public ArrayList<Album> obterAlbumMusicas() {
+        return null;
+    }
+
 
     @Override
     public String getNome() {
