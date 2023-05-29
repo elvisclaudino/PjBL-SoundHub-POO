@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-//public class Lista implements Add{
+//public class Lista implments Add{
 //    private String nome;
 //    private ArrayList<Musica> listaMusicas;
 //
