@@ -1,4 +1,4 @@
-public class Main {
+public class    Main {
     public static void main(String[] args) {
         Artista artista1 = new Artista("WIU", 23, "Homem", "Brasileiro", "Trap", "aaa");
         Musica musica1 = new Musica("Música 1", artista1, 180, "Pop", 2022);
