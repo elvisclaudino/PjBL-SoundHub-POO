@@ -28,7 +28,7 @@ public class Musica {
     }
 
     public static Musica adicionarMusicaAoAlbum(Album album, Artista artista, Scanner scanner) {
-        System.out.println("\nAdicionar Música ao Artista: " + album.getNome());
+        System.out.println("\nAdicionar Música ao Album: " + album.getNome());
 
         System.out.print("Nome da música: ");
         String nomeMusica = scanner.nextLine();
