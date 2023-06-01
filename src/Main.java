@@ -4,8 +4,6 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Main {
-
-    private static final String NOME_ARQUIVO = "musicas.txt";
     public static void exibirMenu() {
         System.out.println("===== Menu =====");
         System.out.println("1. Criar artista");
@@ -62,23 +60,6 @@ public class Main {
         return ouvinte;
     }
 
-    public static void adicionarArtistaEmArquivo(Artista artista) {
-        try {
-            FileWriter fileWriter = new FileWriter("artistas.txt", true); // O parâmetro true indica que o arquivo será aberto no modo de append
-            PrintWriter printWriter = new PrintWriter(fileWriter);
-
-            printWriter.println(artista.getNome());
-
-            printWriter.close();
-            fileWriter.close();
-
-            System.out.println("Artista adicionado ao arquivo artistas.txt");
-        } catch (IOException e) {
-            System.out.println("Ocorreu um erro ao adicionar o artista ao arquivo.");
-            e.printStackTrace();
-        }
-    }
-
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -92,10 +73,11 @@ public class Main {
             switch (opcao) {
                 case 1:
                     Artista artista = criarArtista(scanner);
-                    adicionarArtistaEmArquivo(artista);
+                    Writer.adicionarArtistaEmArquivo(artista);
                     break;
                 case 2:
                     Ouvinte ouvinte = criarOuvinte(scanner);
+                    Writer.adicionarOuvinteEmArquivo(ouvinte);
                 case 0:
                     sair = true;
                     break;
