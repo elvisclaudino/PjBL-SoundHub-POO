@@ -14,4 +14,16 @@ public abstract class Usuario {
     public String getNome() {
         return nome;
     }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public String getNacionalidade() {
+        return nacionalidade;
+    }
 }
