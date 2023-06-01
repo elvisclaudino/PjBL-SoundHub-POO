@@ -43,6 +43,7 @@ public class CriarUsuario {
         sexo.addItem("Masculino");
         sexo.addItem("Feminino");
         sexo.addItem("Outro");
+        sexo.addItem("Prefiro não Informar");
         comboSize = sexo.getPreferredSize(); //dimensiona
         comboSize.width = 200; // seta a width do campo seletor
         comboSize.height = sexo.getPreferredSize().height; // seta o height de acordo com o campo preenchido
