@@ -12,55 +12,6 @@ public class Main {
         System.out.print("Escolha uma opção: ");
     }
 
-    public static Artista criarArtista(Scanner scanner) {
-        System.out.println("==== Criar Artista ====");
-        System.out.print("Nome do artista: ");
-        String nome = scanner.nextLine();
-
-        System.out.print("Idade do artista: ");
-        int idade = scanner.nextInt();
-        scanner.nextLine(); // Limpar o buffer do scanner
-
-        System.out.print("Gênero do artista: ");
-        String genero = scanner.nextLine();
-
-        System.out.print("Nacionalidade do artista: ");
-        String nacionalidade = scanner.nextLine();
-
-        System.out.print("Gênero musical do artista: ");
-        String generoMusical = scanner.nextLine();
-
-        System.out.print("Apelido do artista: ");
-        String apelido = scanner.nextLine();
-
-        Artista artista = new Artista(nome, idade, genero, nacionalidade, generoMusical, apelido);
-        System.out.println("Artista criado com sucesso!");
-
-        return artista;
-    }
-
-    public static Ouvinte criarOuvinte(Scanner scanner) {
-        System.out.println("==== Criar Ouvinte ====");
-        System.out.print("Nome do ouvinte: ");
-        String nome = scanner.nextLine();
-
-        System.out.print("Idade do ouvinte: ");
-        int idade = scanner.nextInt();
-        scanner.nextLine(); // Limpar o buffer do scanner
-
-        System.out.print("Gênero do ouvinte: ");
-        String genero = scanner.nextLine();
-
-        System.out.print("Nacionalidade do ouvinte: ");
-        String nacionalidade = scanner.nextLine();
-
-        Ouvinte ouvinte = new Ouvinte(nome, idade, genero, nacionalidade);
-        System.out.println("Ouvinte criado com sucesso!");
-
-        return ouvinte;
-    }
-
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean sair = false;
@@ -72,11 +23,16 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-                    Artista artista = criarArtista(scanner);
+                    Artista artista = Artista.criarArtista(scanner);
+                    Album album = Album.adicionarAlbumAoArtista(artista, scanner);
+                    Musica musica = Musica.adicionarMusicaAoAlbum(album, artista, scanner);
+                    Musica musica2 = Musica.adicionarMusicaAoAlbum(album, artista, scanner);
+                    Musica musica3 = Musica.adicionarMusicaAoAlbum(album, artista, scanner);
                     Writer.adicionarArtistaEmArquivo(artista);
+                    Writer.adicionarAlbumEmArquivo(album);
                     break;
                 case 2:
-                    Ouvinte ouvinte = criarOuvinte(scanner);
+                    Ouvinte ouvinte = Ouvinte.criarOuvinte(scanner);
                     Writer.adicionarOuvinteEmArquivo(ouvinte);
                 case 0:
                     sair = true;
