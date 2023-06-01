@@ -58,7 +58,7 @@ public class MusicaGrafica {
 
         JButton criarMuscia = new JButton("Criar Musica"); // cria o botao para criar o usuario
         criarMuscia.setBackground(new Color(201, 201, 201)); // cor personalizada para o bot  ao
-        MusicaGraficaAction action = new MusicaGraficaAction(nomeMusicaField,ArtistaField,DuracaoField,genero,AnoLancamentoField); //cria o objeto q vai fazer a escuta
+        MusicaGraficaAcao action = new MusicaGraficaAcao(nomeMusicaField,ArtistaField,DuracaoField,genero,AnoLancamentoField); //cria o objeto q vai fazer a escuta
         criarMuscia.addActionListener(action); //fica observando quando o botão for ativado
 
         gbc.gridx = 0;
