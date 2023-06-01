@@ -38,7 +38,7 @@ public class PlayerMusica {
                 System.out.print("Digite o gênero musical do artista: ");
                 String generoMusical = scanner.nextLine();
 
-                Artista artista = new Artista(nomeArtista, 18, genero, "brasileiro", generoMusical, "aaaa");
+                Artista artista = new Artista(nomeArtista, 18, genero, "brasileiro", generoMusical, "Embaixador");
 
                 Musica musica = new Musica(nome, artista, duracao, genero, anoLancamento);
 
@@ -72,7 +72,7 @@ public class PlayerMusica {
 
                 String generoMusical = atributos[5];
 
-                Artista artista = new Artista(nomeArtista, 18, genero, "brasileiro", generoMusical, "aaaa");
+                Artista artista = new Artista(nomeArtista, 18, genero, "brasileiro", generoMusical, "Embaixador");
 
                 Musica musica = new Musica(nome, artista, duracao, genero, anoLancamento);
 
