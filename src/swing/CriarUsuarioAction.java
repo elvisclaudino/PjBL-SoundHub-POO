@@ -4,14 +4,14 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class BotaoAction implements ActionListener {
+public class CriarUsuarioAction implements ActionListener {
 
     private JTextField catchNome; // cria o atributo texto que posteriormente vai captar o usuario
     private JComboBox catchTipoUser;
     private JComboBox catchSexo;
     private JTextField catchIdade;
     private JTextField catchNacionalidade;
-    public BotaoAction(JTextField catchNome, JComboBox catchTipoUser, JComboBox catchSexo, JTextField catchIdade, JTextField catchNacionalidade){ //construtor
+    public CriarUsuarioAction(JTextField catchNome, JComboBox catchTipoUser, JComboBox catchSexo, JTextField catchIdade, JTextField catchNacionalidade){ //construtor
         this.catchNome = catchNome;
         this.catchTipoUser = catchTipoUser;
         this.catchSexo = catchSexo;
@@ -28,7 +28,7 @@ public class BotaoAction implements ActionListener {
 
 
 
-        //JOptionPane.showMessageDialog(null,"Usuario Criado");
+        JOptionPane.showMessageDialog(null,"Usuario Criado");
          }
 
 }
