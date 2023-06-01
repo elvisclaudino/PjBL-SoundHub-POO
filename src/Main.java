@@ -46,7 +46,7 @@ public class Main {
 
         System.out.print("Idade do ouvinte: ");
         int idade = scanner.nextInt();
-        scanner.nextLine(); // Limpar o buffer do scanner
+        scanner.nextLine();
 
         System.out.print("Gênero do ouvinte: ");
         String genero = scanner.nextLine();
