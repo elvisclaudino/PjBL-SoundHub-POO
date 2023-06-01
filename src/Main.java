@@ -19,7 +19,7 @@ public class Main {
 
         System.out.print("Idade do artista: ");
         int idade = scanner.nextInt();
-        scanner.nextLine(); // Limpar o buffer do scanner
+        scanner.nextLine();
 
         System.out.print("Gênero do artista: ");
         String genero = scanner.nextLine();
