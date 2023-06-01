@@ -63,7 +63,7 @@ public class InterfaceGrafica {
 
         JButton botao = new JButton("Criar Usuário"); // cria o botao para criar o usuario
         botao.setBackground(new Color(201, 201, 201)); // cor personalizada para o bot  ao
-        BotaoAction action = new BotaoAction(nomeField); //cria o objeto q vai fazer a escuta
+        BotaoAction action = new BotaoAction(nomeField,tipoUsuario,sexo ,idadeField, nacionalidadeField); //cria o objeto q vai fazer a escuta
         botao.addActionListener(action); //fica observando quando o botão for ativado
 
         //As propriedades gridx e gridy dessa classe representam a posição da célula onde o componente será colocado.
