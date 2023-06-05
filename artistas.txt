@@ -1,0 +1,5 @@
+Nome: gustavo lima
+Idade: 33
+Gênero: sertanejo
+Nacionalidade: brasileiro
+=============================================
