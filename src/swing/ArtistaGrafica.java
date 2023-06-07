@@ -6,56 +6,53 @@ import java.awt.*;
 public class ArtistaGrafica {
 
     public static void main(String[] args) {
-        JFrame Artistajanela = new JFrame(); // Declara o JFrame para criar a janela
-        Artistajanela.setTitle("Registrar Musica - SoundHub -"); //seta o titulo
-        Artistajanela.setSize(400, 400);// seta tamanho da janela
-        Artistajanela.setLocationRelativeTo(null); //posiciona a janela no centro da tela
-        Artistajanela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // quando fechar a janela para o codigo
-        int espacamentoVertical = 8; // seta o tamanho do espaçamento
+        JFrame artistajanela = new JFrame();
+        artistajanela.setTitle("Registrar Musica - SoundHub");
+        artistajanela.setSize(400, 400);
+        artistajanela.setLocationRelativeTo(null);
+        artistajanela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Cria o painel
-        JPanel ArtistaPainel = new JPanel();
-        Artistajanela.setLayout(new GridBagLayout()); // seta o grid layout(parecido com flex(modelo estilização)
+        int espacamentoVertical = 8;
 
-        GridBagConstraints gbc = new GridBagConstraints();// Cria o objeto GridBagConstraints
-        gbc.anchor = GridBagConstraints.WEST; //Posiciona a esquerda o objeto
-        gbc.insets = new Insets(0, 10, 0, 10); // cria a margin semelhante ao css
+        JPanel artistaPainel = new JPanel();
+        artistaPainel.setLayout(new GridBagLayout());
 
-        // Componentes
-        JLabel nomeArtistaLabel = new JLabel("Digite o nome do Artista"); // label musica
-        JTextField nomeArtistaField = new JTextField(18); // input type text(campo)
-        nomeArtistaField.setMaximumSize(new Dimension(200, nomeArtistaField.getPreferredSize().height)); // seta um tamanho para os campos de texto
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.anchor = GridBagConstraints.WEST;
+        gbc.insets = new Insets(0, 10, 0, 10);
 
-        JLabel ArtistaApelidoLabel = new JLabel("Digite o apelido do Artista:"); // label muscia
-        JTextField ArtistaApelidoField = new JTextField(18); // input type text(campo)
-        ArtistaApelidoField.setMaximumSize(new Dimension(200, ArtistaApelidoField.getPreferredSize().height)); // seta um tamanho para os campos de texto
+        JLabel nomeArtistaLabel = new JLabel("Digite o nome do Artista");
+        JTextField nomeArtistaField = new JTextField(18);
+        nomeArtistaField.setMaximumSize(new Dimension(200, nomeArtistaField.getPreferredSize().height));
 
-        JLabel NacionalidadeLabel = new JLabel("Digite a nacionalidade:"); // duracao musica
-        JTextField NacionalidadeField = new JTextField(18); // input type text(campo)
-        NacionalidadeField.setMaximumSize(new Dimension(200, NacionalidadeField.getPreferredSize().height)); // seta um tamanho para os campos de texto
+        JLabel artistaApelidoLabel = new JLabel("Digite o apelido do Artista:");
+        JTextField artistaApelidoField = new JTextField(18);
+        artistaApelidoField.setMaximumSize(new Dimension(200, artistaApelidoField.getPreferredSize().height));
 
-        JLabel IdadeArtistaLabel = new JLabel("Digite a idade:"); // duracao musica
-        JTextField IdadeArtistaField = new JTextField(18); // input type text(campo)
-        IdadeArtistaField.setMaximumSize(new Dimension(200, IdadeArtistaField.getPreferredSize().height));
+        JLabel nacionalidadeLabel = new JLabel("Digite a nacionalidade:");
+        JTextField nacionalidadeField = new JTextField(18);
+        nacionalidadeField.setMaximumSize(new Dimension(200, nacionalidadeField.getPreferredSize().height));
 
+        JLabel idadeArtistaLabel = new JLabel("Digite a idade:");
+        JTextField idadeArtistaField = new JTextField(18);
+        idadeArtistaField.setMaximumSize(new Dimension(200, idadeArtistaField.getPreferredSize().height));
 
-        JComboBox sexo = new JComboBox(); // Cria uma caixa de seleção
-        sexo.addItem("Selecione o seu sexo"); //opções
+        JComboBox<String> sexo = new JComboBox<>();
+        sexo.addItem("Selecione o seu sexo");
         sexo.addItem("Masculino");
         sexo.addItem("Feminino");
         sexo.addItem("Outro");
         sexo.addItem("Prefiro não Informar");
 
-        Dimension comboSize = sexo.getPreferredSize(); //dimensiona o seletor
-        comboSize = sexo.getPreferredSize(); //dimensiona
-        comboSize.width = 200; // seta a width do campo seletor
-        comboSize.height = sexo.getPreferredSize().height; // seta o height de acordo com o campo preenchido
-        sexo.setPreferredSize(comboSize); // seta de acordo com os valores presentes
-        sexo.setMaximumSize(comboSize); // seta para não ultrapassar os limites
+        Dimension comboSize = sexo.getPreferredSize();
+        comboSize = sexo.getPreferredSize();
+        comboSize.width = 200;
+        comboSize.height = sexo.getPreferredSize().height;
+        sexo.setPreferredSize(comboSize);
+        sexo.setMaximumSize(comboSize);
 
-
-        JComboBox genero = new JComboBox(); // Cria uma caixa de seleção
-        genero.addItem("Selecione o seu genero"); //opções
+        JComboBox<String> genero = new JComboBox<>();
+        genero.addItem("Selecione o seu genero");
         genero.addItem("Sertanejo");
         genero.addItem("Trap");
         genero.addItem("Funk");
@@ -67,74 +64,65 @@ public class ArtistaGrafica {
         genero.addItem("Rap");
         genero.addItem("Rock");
 
+        comboSize = genero.getPreferredSize();
+        comboSize = genero.getPreferredSize();
+        comboSize.width = 200;
+        comboSize.height = genero.getPreferredSize().height;
+        genero.setPreferredSize(comboSize);
+        genero.setMaximumSize(comboSize);
 
-        comboSize = genero.getPreferredSize(); //dimensiona o seletor
-        comboSize = genero.getPreferredSize(); //dimensiona
-        comboSize.width = 200; // seta a width do campo seletor
-        comboSize.height = genero.getPreferredSize().height; // seta o height de acordo com o campo preenchido
-        genero.setPreferredSize(comboSize); // seta de acordo com os valores presentes
-        genero.setMaximumSize(comboSize); // seta para não ultrapassar os limites
-
-
-
-
-        JButton criarArtista = new JButton("Criar Musica"); // cria o botao para criar o usuario
-        criarArtista.setBackground(new Color(201, 201, 201)); // cor personalizada para o bot  ao
-        ArtistaAction action = new ArtistaAction(nomeArtistaField,sexo,IdadeArtistaField,ArtistaApelidoField,NacionalidadeField, genero); //cria o objeto q vai fazer a escuta
-        criarArtista.addActionListener(action); //fica observando quando o botão for ativado
+        JButton botaoArtista = new JButton("Criar Artista"); // cria o botao para criar o usuario
+        botaoArtista.setBackground(new Color(201, 201, 201)); // cor personalizada para o bot  ao
+        ArtistaAction action = new ArtistaAction(nomeArtistaField,sexo, idadeArtistaField,artistaApelidoField,nacionalidadeField,genero); //cria o objeto q vai fazer a escuta
+        botaoArtista.addActionListener(action); //fica observando quando o botão for ativado
 
         gbc.gridx = 0;
         gbc.gridy = 0;
-        ArtistaPainel.add(nomeArtistaLabel, gbc);
+        artistaPainel.add(nomeArtistaLabel, gbc);
         gbc.gridy++;
-        ArtistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
+        artistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
         gbc.gridy++;
-        ArtistaPainel.add(nomeArtistaField, gbc);
+        artistaPainel.add(nomeArtistaField, gbc);
         gbc.gridy++;
-        ArtistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
+        artistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
         gbc.gridy++;
-        ArtistaPainel.add(sexo, gbc);
+        artistaPainel.add(idadeArtistaLabel, gbc);
         gbc.gridy++;
-        ArtistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
+        artistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
         gbc.gridy++;
-        ArtistaPainel.add(IdadeArtistaLabel, gbc);
+        artistaPainel.add(idadeArtistaField, gbc);
         gbc.gridy++;
-        ArtistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
+        artistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
         gbc.gridy++;
-        ArtistaPainel.add(IdadeArtistaField, gbc);
+        artistaPainel.add(artistaApelidoLabel, gbc);
         gbc.gridy++;
-        ArtistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
+        artistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
         gbc.gridy++;
-        ArtistaPainel.add(ArtistaApelidoLabel, gbc);
+        artistaPainel.add(artistaApelidoField, gbc);
         gbc.gridy++;
-        ArtistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
+        artistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
         gbc.gridy++;
-        ArtistaPainel.add(ArtistaApelidoField, gbc);
+        artistaPainel.add(nacionalidadeLabel, gbc);
         gbc.gridy++;
-        ArtistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
+        artistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
         gbc.gridy++;
-        ArtistaPainel.add(NacionalidadeLabel, gbc);
+        artistaPainel.add(nacionalidadeField, gbc);
         gbc.gridy++;
-        ArtistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
+        artistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
         gbc.gridy++;
-        ArtistaPainel.add(NacionalidadeField, gbc);
+        artistaPainel.add(sexo, gbc);
         gbc.gridy++;
-        ArtistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
+        artistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
         gbc.gridy++;
-        ArtistaPainel.add(genero, gbc);
+        artistaPainel.add(genero, gbc);
         gbc.gridy++;
-        ArtistaPainel.add(criarArtista, gbc);
+        artistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
         gbc.gridy++;
-        ArtistaPainel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
+        artistaPainel.add(botaoArtista, gbc);
         gbc.gridy++;
-        ArtistaPainel.add(Box.createVerticalGlue(), gbc); // Ao adicionar Box.createVerticalGlue() ao painel, você está inserindo esse espaçador elástico vertical,
-        // permitindo que os componentes sejam posicionados conforme necessário dentro do layout, ajustando-se ao espaço disponível verticalmente( RESPONSIVIDADE).
+        artistaPainel.add(Box.createVerticalGlue(), gbc);
 
-        // Adiciona o painel à janela
-        Artistajanela.add(ArtistaPainel); // adiciona o painel
-        Artistajanela.setVisible(true); // torna ele visivel
-
+        artistajanela.add(artistaPainel);
+        artistajanela.setVisible(true);
     }
 }
-
-
