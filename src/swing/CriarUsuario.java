@@ -27,32 +27,18 @@ public class CriarUsuario {
         JTextField nomeField = new JTextField(18); // input type text(campo)
         nomeField.setMaximumSize(new Dimension(200, nomeField.getPreferredSize().height)); // seta um tamanho para os campos de texto
 
-        JComboBox tipoUsuario = new JComboBox(); //Cria uma caixa de selação
-        tipoUsuario.addItem("Selecione o tipo do usuario");//opções
-        tipoUsuario.addItem("Ouvinte");
-        tipoUsuario.addItem("Artista");
-        Dimension comboSize = tipoUsuario.getPreferredSize(); //dimensiona o seletor
-        comboSize.width = 200; // seta a width do campo seletor
-        comboSize.height = tipoUsuario.getPreferredSize().height; // seta o height de acordo com o campo preenchido
-        tipoUsuario.setPreferredSize(comboSize); //seta de acordo com os valores presentes
-        tipoUsuario.setMaximumSize(comboSize); // seta para não ultrapassar os limites
-
-
         JComboBox sexo = new JComboBox(); // Cria uma caixa de seleção
         sexo.addItem("Selecione o seu sexo"); //opções
         sexo.addItem("Masculino");
         sexo.addItem("Feminino");
         sexo.addItem("Outro");
         sexo.addItem("Prefiro não Informar");
-        comboSize = sexo.getPreferredSize(); //dimensiona
+
+        Dimension comboSize = sexo.getPreferredSize(); //dimensiona
         comboSize.width = 200; // seta a width do campo seletor
         comboSize.height = sexo.getPreferredSize().height; // seta o height de acordo com o campo preenchido
         sexo.setPreferredSize(comboSize); // seta de acordo com os valores presentes
         sexo.setMaximumSize(comboSize); // seta para não ultrapassar os limites
-
-        JLabel senhaLabel = new JLabel("Digite sua senha"); // label senha
-        JTextField senhaField = new JTextField(18); // cria o campo de input e seta o tamanho
-        senhaField.setMaximumSize(new Dimension(300, senhaField.getPreferredSize().height)); // seta um tamanho para os campos de texto
 
         JLabel idadeLabel = new JLabel("Insira sua idade"); // label idade
         JTextField idadeField = new JTextField(18);// cria o campo de input e seta o tamanho
@@ -64,7 +50,7 @@ public class CriarUsuario {
 
         JButton botao = new JButton("Criar Usuário"); // cria o botao para criar o usuario
         botao.setBackground(new Color(201, 201, 201)); // cor personalizada para o bot  ao
-        CriarUsuarioAction action = new CriarUsuarioAction(nomeField,tipoUsuario,sexo ,idadeField, nacionalidadeField); //cria o objeto q vai fazer a escuta
+        CriarUsuarioAction action = new CriarUsuarioAction(nomeField,sexo ,idadeField, nacionalidadeField); //cria o objeto q vai fazer a escuta
         botao.addActionListener(action); //fica observando quando o botão for ativado
 
         //As propriedades gridx e gridy dessa classe representam a posição da célula onde o componente será colocado.
@@ -83,19 +69,7 @@ public class CriarUsuario {
         gbc.gridy++;
         painel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
         gbc.gridy++;
-        painel.add(tipoUsuario, gbc);
-        gbc.gridy++;
-        painel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
-        gbc.gridy++;
         painel.add(sexo, gbc);
-        gbc.gridy++;
-        painel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
-        gbc.gridy++;
-        painel.add(senhaLabel, gbc);
-        gbc.gridy++;
-        painel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
-        gbc.gridy++;
-        painel.add(senhaField, gbc);
         gbc.gridy++;
         painel.add(Box.createVerticalStrut(espacamentoVertical), gbc);
         gbc.gridy++;
