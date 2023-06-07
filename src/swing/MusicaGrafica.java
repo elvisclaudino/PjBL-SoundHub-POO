@@ -3,7 +3,7 @@ package swing;
 import javax.swing.*;
 import java.awt.*;
 public class MusicaGrafica {
-    public static void main(String[] args) {
+    public MusicaGrafica() {
         JFrame Musicajanela = new JFrame(); // Declara o JFrame para criar a janela
         Musicajanela.setTitle("Registrar Musica - SoundHub -"); //seta o titulo
         Musicajanela.setSize(400, 400);// seta tamanho da janela

@@ -5,7 +5,7 @@ import java.awt.*;
 
 
 public class AlbumGrafica {
-    public static void main(String[] args) {
+    public AlbumGrafica() {
         JFrame Albumjanela = new JFrame(); // Declara o JFrame para criar a janela
         Albumjanela.setTitle("Registrar Musica - SoundHub -"); //seta o titulo
         Albumjanela.setSize(400, 400);// seta tamanho da janela

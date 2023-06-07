@@ -1,7 +1,11 @@
+import swing.CriarUsuario;
+import swing.OuvinteInterface;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
+import javax.swing.*;
 
 public class Main {
     public static void exibirMenu() {
@@ -23,6 +27,7 @@ public class Main {
 
             switch (opcao) {
                 case 1:
+                    CriarUsuario CriaUsuario= new CriarUsuario();
                     Artista artista = Artista.criarArtista(scanner);
                     Album album = Album.adicionarAlbumAoArtista(artista, scanner);
                     Musica musica = Musica.adicionarMusicaAoAlbum(album, artista, scanner);
@@ -32,8 +37,7 @@ public class Main {
                     Writer.adicionarAlbumEmArquivo(album);
                     break;
                 case 2:
-                    Ouvinte ouvinte = Ouvinte.criarOuvinte(scanner);
-                    Writer.adicionarOuvinteEmArquivo(ouvinte);
+                    OuvinteInterface CriaOuvinte= new OuvinteInterface();
                 case 0:
                     sair = true;
                     break;

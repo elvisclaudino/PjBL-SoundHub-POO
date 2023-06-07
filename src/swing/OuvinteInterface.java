@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class OuvinteInterface {
-    public static void main(String[] args) {
+    public OuvinteInterface() {
 
         JFrame janela = new JFrame(); // Declara o JFrame para criar a janela
         janela.setTitle("Registrar Ouvinte- SoundHub -");

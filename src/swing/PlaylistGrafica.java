@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PlaylistGrafica {
-    public static void main(String[] args) {
+    public PlaylistGrafica() {
         JFrame Playlistjanela = new JFrame();
         Playlistjanela.setTitle("Registrar Playlist - SoundHub -");
         Playlistjanela.setSize(400, 400);

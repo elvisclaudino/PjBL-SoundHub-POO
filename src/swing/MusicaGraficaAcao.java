@@ -10,6 +10,8 @@ import java.awt.event.ActionListener;
         private javax.swing.JComboBox catchGenero;
         private javax.swing.JTextField catchAnoLancamento;
 
+
+
         public MusicaGraficaAcao(JTextField catchNomeMusica, JTextField catchArtista, JTextField catchDuracao, JComboBox catchGenero, JTextField catchAnoLancamento) {
             this.catchNomeMusica = catchNomeMusica;
             this.catchArtista = catchArtista;
@@ -17,6 +19,7 @@ import java.awt.event.ActionListener;
             this.catchGenero = catchGenero;
             this.catchAnoLancamento = catchAnoLancamento;
         }
+
 
 
         @Override
@@ -31,6 +34,8 @@ import java.awt.event.ActionListener;
 
             JOptionPane.showMessageDialog(null,dados);
             JOptionPane.showMessageDialog(null,"Usuario Criado");
+
+
         }
     }
 

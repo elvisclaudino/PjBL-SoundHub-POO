@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class CriarUsuario {
-    public static void main(String[] args) {
+    public CriarUsuario() {
 
         JFrame janela = new JFrame(); // Declara o JFrame para criar a janela
         janela.setTitle("Registrar Usuario - SoundHub -");

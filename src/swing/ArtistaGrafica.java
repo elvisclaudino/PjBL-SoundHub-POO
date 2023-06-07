@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class ArtistaGrafica {
 
-    public static void main(String[] args) {
+    public ArtistaGrafica() {
         JFrame artistajanela = new JFrame();
         artistajanela.setTitle("Registrar Musica - SoundHub");
         artistajanela.setSize(400, 400);
