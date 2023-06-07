@@ -18,7 +18,6 @@ public class AlbumGraficoAcao implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         String ArtistaAlbum = catchArtistaAlbum.getText(); // GET recebe o valor do input
         String NomeAlbum = catchnomeAlbum.getText();
-        System.out.println("AAAAAAAAA");
 
         //String dados1 = "Nome Album Artista = " + ArtistaAlbum + " o nome do album = " + NomeAlbum;
 
