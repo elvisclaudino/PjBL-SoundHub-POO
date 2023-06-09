@@ -31,7 +31,8 @@ public class Main {
                     ArtistaGrafica artistaGrafica = new ArtistaGrafica();
                     break;
                 case 2:
-                    OuvinteInterface CriaOuvinte= new OuvinteInterface();
+                    OuvinteInterface CriarOuvinte = new OuvinteInterface();
+                    break;
                 case 0:
                     sair = true;
                     break;

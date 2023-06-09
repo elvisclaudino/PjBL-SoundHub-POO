@@ -1,5 +1,0 @@
-Nome: Elvisin
-Idade: 19
-Gênero: Masculino
-Nacionalidade: Brasileiro
-=============================================

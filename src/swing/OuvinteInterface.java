@@ -49,7 +49,7 @@ public class OuvinteInterface {
 
         JButton botao = new JButton("Criar Ouvinte"); // cria o botao para criar o usuario
         botao.setBackground(new Color(201, 201, 201)); // cor personalizada para o bot  ao
-        CriarOuvinteAction action = new CriarOuvinteAction(nomeOuvinteField, sexoOuvinte, idadeOuvinteField, nacionalidadeField);
+        CriarOuvinteAction action = new CriarOuvinteAction(nomeOuvinteField, sexoOuvinte, idadeOuvinteField, nacionalidadeField, janela);
         //cria o objeto q vai fazer a escuta
         botao.addActionListener(action); //fica observando quando o botão for ativado
 
