@@ -39,4 +39,8 @@ public class Album extends Conteudo {
     public void adicionarAlbumAoArtista(Artista artista, Album album) {
         artista.adicionarAlbum(album);
     }
+
+    public String getNomeArtista() {
+        return artista.getNome();
+    }
 }

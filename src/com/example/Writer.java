@@ -54,6 +54,7 @@ public class Writer {
             album.setDuracao();
 
             printWriter.println("Nome: " + album.getNome());
+            printWriter.println("Artista: " + album.getNomeArtista());
             printWriter.println("Músicas do album: ");
             for (Musica musica : album.obterListaMusicas()) {
                 printWriter.println("- " + musica.getNome() + " - " + musica.getDuracao() + "s");
