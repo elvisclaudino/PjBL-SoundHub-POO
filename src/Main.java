@@ -23,7 +23,7 @@ public class Main {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     ArtistaGrafica artistaGrafica = new ArtistaGrafica();
-                    frame.dispose(); // Fecha o frame após criar o artista
+                    frame.dispose();
                 }
             });
 
@@ -31,7 +31,7 @@ public class Main {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     OuvinteInterface ouvinteInterface = new OuvinteInterface();
-                    frame.dispose(); // Fecha o frame após criar o ouvinte
+                    frame.dispose();
                 }
             });
 

@@ -36,23 +36,7 @@ public class Album extends Conteudo {
         return duracao;
     }
 
-    public static Album adicionarAlbumAoArtista(Artista artista, Scanner scanner) {
-        System.out.println("\nAdicionar Música ao Artista: " + artista.getNome());
-
-        System.out.print("Nome da album: ");
-        String nomeAlbum = scanner.nextLine();
-
-        System.out.print("Gênero da música: ");
-        String generoAlbum = scanner.nextLine();
-
-        System.out.print("Ano de lançamento da música: ");
-        int anoLancamentoAlbum = scanner.nextInt();
-        scanner.nextLine();
-
-        Album album = new Album(nomeAlbum, generoAlbum, anoLancamentoAlbum, artista);
+    public void adicionarAlbumAoArtista(Artista artista, Album album) {
         artista.adicionarAlbum(album);
-
-        System.out.println("Album adicionada com sucesso!");
-        return album;
     }
 }

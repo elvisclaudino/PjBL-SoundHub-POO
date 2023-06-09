@@ -28,27 +28,7 @@ public class Musica {
         return artista;
     }
 
-    public static Musica adicionarMusicaAoAlbum(Album album, Artista artista, Scanner scanner) {
-        System.out.println("\nAdicionar Música ao Album: " + album.getNome());
-
-        System.out.print("Nome da música: ");
-        String nomeMusica = scanner.nextLine();
-
-        System.out.print("Duração da música (em segundos): ");
-        int duracao = scanner.nextInt();
-        scanner.nextLine(); // Limpar o buffer do scanner
-
-        System.out.print("Gênero da música: ");
-        String genero = scanner.nextLine();
-
-        System.out.print("Ano de lançamento da música: ");
-        int anoLancamento = scanner.nextInt();
-        scanner.nextLine(); // Limpar o buffer do scanner
-
-        Musica musica = new Musica(nomeMusica, artista, duracao, genero, anoLancamento);
+    public void adicionarMusicaAoAlbum(Album album, Musica musica) {
         album.adicionarMusica(musica);
-
-        System.out.println("Música adicionada com sucesso!");
-        return musica;
     }
 }
