@@ -91,6 +91,7 @@ public class ArtistaAction implements ActionListener {
                     int yearMusic = Integer.parseInt(anoMusica.getText());
 
                     Musica musica = new Musica(titleMusic, artista, durationMusic, genreMusic, yearMusic);
+                    Writer.adicionarMusicaEmArquivo(musica, album);
                     musica.adicionarMusicaAoAlbum(album, musica);
 
                     int continuar = JOptionPane.showConfirmDialog(null, "Deseja adicionar mais músicas?", "Adicionar Música", JOptionPane.YES_NO_OPTION);

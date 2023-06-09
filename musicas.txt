@@ -1,2 +1,21 @@
-
-Oi;Xau;20
+Nome: musica1
+Artista: elvis
+Genero: sertanejo
+Duração: 200
+Duração: 2019
+Album: album1
+=============================================
+Nome: musica2
+Artista: elvis
+Genero: sertanejo
+Duração: 230
+Duração: 2019
+Album: album1
+=============================================
+Nome: musica3
+Artista: elvis
+Genero: sertanejo
+Duração: 300
+Duração: 2019
+Album: album1
+=============================================

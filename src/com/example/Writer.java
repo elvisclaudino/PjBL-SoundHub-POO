@@ -72,4 +72,27 @@ public class Writer {
         }
     }
 
+    public static void adicionarMusicaEmArquivo(Musica musica, Album album) {
+        try {
+            FileWriter fileWriter = new FileWriter("musicas.txt", true);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+
+            printWriter.println("Nome: " + musica.getNome());
+            printWriter.println("Artista: " + musica.getNomeArtista());
+            printWriter.println("Genero: " + musica.getGeneroMusical());
+            printWriter.println("Duração: " + musica.getDuracao());
+            printWriter.println("Duração: " + musica.getLancamento());
+            printWriter.println("Album: " + album.getNome());
+            printWriter.println("=============================================");
+
+            printWriter.close();
+            fileWriter.close();
+
+            System.out.println("Ouvinte adicionado ao arquivo musicas.txt");
+        } catch (IOException e) {
+            System.out.println("Ocorreu um erro ao adicionar a música ao arquivo.");
+            e.printStackTrace();
+        }
+    }
+
 }

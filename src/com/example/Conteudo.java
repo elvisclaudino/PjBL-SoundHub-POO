@@ -14,4 +14,14 @@ public abstract class Conteudo implements Add{
     public String getNome() {
         return nome;
     }
+
+    @Override
+    public String getGeneroMusical() {
+        return generoMusical;
+    }
+
+    @Override
+    public int getLancamento() {
+        return anoDeLancamento;
+    }
 }

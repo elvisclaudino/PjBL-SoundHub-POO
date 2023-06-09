@@ -28,6 +28,18 @@ public class Musica {
         return artista;
     }
 
+    public String getNomeArtista() {
+        return artista.getNome();
+    }
+
+    public String getGeneroMusical() {
+        return genero;
+    }
+
+    public int getLancamento() {
+        return anoLancamento;
+    }
+
     public void adicionarMusicaAoAlbum(Album album, Musica musica) {
         album.adicionarMusica(musica);
     }
