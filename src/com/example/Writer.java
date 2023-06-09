@@ -59,7 +59,7 @@ public class Writer {
             for (Musica musica : album.obterListaMusicas()) {
                 printWriter.println("- " + musica.getNome() + " - " + musica.getDuracao() + "s");
             }
-            printWriter.println("Duração: " + album.getDuracao());
+            printWriter.println("Duração: " + album.getDuracao() + "s");
             printWriter.println("=============================================");
 
             printWriter.close();
