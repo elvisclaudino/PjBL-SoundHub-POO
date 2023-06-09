@@ -1,44 +1,55 @@
 import swing.ArtistaGrafica;
-import swing.CriarUsuario;
 import swing.OuvinteInterface;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Scanner;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Main {
-    public static void exibirMenu() {
-        System.out.println("===== Menu =====");
-        System.out.println("1. Criar artista");
-        System.out.println("2. Criar ouvinte");
-        System.out.println("0. Sair");
-        System.out.print("Escolha uma opção: ");
-    }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        boolean sair = false;
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("Menu");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(300, 200);
+            frame.setLayout(new GridLayout(3, 1));
 
-        while (!sair) {
-            exibirMenu();
-            int opcao = scanner.nextInt();
-            scanner.nextLine();
+            JButton artistaButton = new JButton("Criar Artista");
+            JButton ouvinteButton = new JButton("Criar Ouvinte");
+            JButton sairButton = new JButton("Sair");
 
-            switch (opcao) {
-                case 1:
+            artistaButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
                     ArtistaGrafica artistaGrafica = new ArtistaGrafica();
-                    break;
-                case 2:
-                    OuvinteInterface CriarOuvinte = new OuvinteInterface();
-                    break;
-                case 0:
-                    sair = true;
-                    break;
-                default:
-                    System.out.println("Opção inválida, tente novamento!");
-            }
-        }
+                    frame.dispose(); // Fecha o frame após criar o artista
+                }
+            });
+
+            ouvinteButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    OuvinteInterface ouvinteInterface = new OuvinteInterface();
+                    frame.dispose(); // Fecha o frame após criar o ouvinte
+                }
+            });
+
+            sairButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    System.exit(0); // Encerra o programa ao clicar em "Sair"
+                }
+            });
+
+            frame.add(artistaButton);
+            frame.add(ouvinteButton);
+            frame.add(sairButton);
+
+            frame.setVisible(true);
+        });
     }
 }
+
+
+
