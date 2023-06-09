@@ -1,3 +1,4 @@
+package com.example;
 public abstract class Usuario {
     private String nome;
     private int idade;

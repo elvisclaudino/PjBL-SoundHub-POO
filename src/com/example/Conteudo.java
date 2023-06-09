@@ -1,3 +1,4 @@
+package com.example;
 public abstract class Conteudo implements Add{
     private String nome;
     private String generoMusical;

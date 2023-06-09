@@ -1,3 +1,4 @@
+import swing.ArtistaGrafica;
 import swing.CriarUsuario;
 import swing.OuvinteInterface;
 
@@ -27,14 +28,7 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-                    CriarUsuario CriaUsuario= new CriarUsuario();
-                    Artista artista = Artista.criarArtista(scanner);
-                    Album album = Album.adicionarAlbumAoArtista(artista, scanner);
-                    Musica musica = Musica.adicionarMusicaAoAlbum(album, artista, scanner);
-                    Musica musica2 = Musica.adicionarMusicaAoAlbum(album, artista, scanner);
-                    Musica musica3 = Musica.adicionarMusicaAoAlbum(album, artista, scanner);
-                    Writer.adicionarArtistaEmArquivo(artista);
-                    Writer.adicionarAlbumEmArquivo(album);
+                    ArtistaGrafica artistaGrafica = new ArtistaGrafica();
                     break;
                 case 2:
                     OuvinteInterface CriaOuvinte= new OuvinteInterface();

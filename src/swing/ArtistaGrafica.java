@@ -73,7 +73,7 @@ public class ArtistaGrafica {
 
         JButton botaoArtista = new JButton("Criar Artista"); // cria o botao para criar o usuario
         botaoArtista.setBackground(new Color(201, 201, 201)); // cor personalizada para o bot  ao
-        ArtistaAction action = new ArtistaAction(nomeArtistaField,sexo, idadeArtistaField,artistaApelidoField,nacionalidadeField,genero); //cria o objeto q vai fazer a escuta
+        ArtistaAction action = new ArtistaAction(nomeArtistaField,sexo, idadeArtistaField,artistaApelidoField,nacionalidadeField,genero,artistajanela); //cria o objeto q vai fazer a escuta
         botaoArtista.addActionListener(action); //fica observando quando o botão for ativado
 
         gbc.gridx = 0;
