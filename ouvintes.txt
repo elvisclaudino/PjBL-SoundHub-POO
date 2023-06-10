@@ -13,3 +13,18 @@ Idade: 19
 Gênero: Feminino
 Nacionalidade: brasileiro
 =============================================
+Nome: elvs
+Idade: 23
+Gênero: Masculino
+Nacionalidade: brasileiro
+=============================================
+Nome: elivs
+Idade: 19
+Gênero: Masculino
+Nacionalidade: brasileiro
+=============================================
+Nome: elvis
+Idade: 23
+Gênero: Feminino
+Nacionalidade: brasileiro
+=============================================

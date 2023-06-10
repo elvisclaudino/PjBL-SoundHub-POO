@@ -95,4 +95,54 @@ public class Writer {
         }
     }
 
+    public static void adicionarMusicaPlaylistEmArquivo(MusicaPlaylist musicaPlaylist, Playlist playlist) {
+        try {
+            FileWriter fileWriter = new FileWriter("musicas.txt", true);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+
+            System.out.println();
+            printWriter.println("Nome: " + musicaPlaylist.getNome());
+            printWriter.println("Artista: " + musicaPlaylist.getArtista());
+            printWriter.println("Genero: " + musicaPlaylist.getGeneroMusical());
+            printWriter.println("Duração: " + musicaPlaylist.getDuracao());
+            printWriter.println("Duração: " + musicaPlaylist.getLancamento());
+            printWriter.println("Single");
+            printWriter.println("=============================================");
+
+            printWriter.close();
+            fileWriter.close();
+
+            System.out.println("Música adicionada ao arquivo musicas.txt");
+        } catch (IOException e) {
+            System.out.println("Ocorreu um erro ao adicionar a música ao arquivo.");
+            e.printStackTrace();
+        }
+    }
+
+    public static void adicionarPlaylistEmArquivo(Playlist playlist) {
+        try {
+            FileWriter fileWriter = new FileWriter("playlist.txt", true);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+
+            playlist.setDuracao();
+
+            printWriter.println("Nome: " + playlist.getNome());
+            printWriter.println("Artista: " + playlist.getOuvinte());
+            printWriter.println("Músicas da playlist: ");
+            for (MusicaPlaylist musicaPlaylist : playlist.obterListaMusicasPlaylist()) {
+                printWriter.println("- " + musicaPlaylist.getNome() + " - " + musicaPlaylist.getDuracao() + "s");
+            }
+            printWriter.println("Duração: " + playlist.getDuracao() + "s");
+            printWriter.println("=============================================");
+
+            printWriter.close();
+            fileWriter.close();
+
+            System.out.println("Ouvinte adicionado ao arquivo ouvintes.txt");
+        } catch (IOException e) {
+            System.out.println("Ocorreu um erro ao adicionar o ouvinte ao arquivo.");
+            e.printStackTrace();
+        }
+    }
+
 }

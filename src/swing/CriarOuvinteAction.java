@@ -58,6 +58,7 @@ import java.awt.event.ActionListener;
                     JTextField duracaoMusica = new JTextField();
                     JTextField generoMusica = new JTextField();
                     JTextField anoMusica = new JTextField();
+                    JTextField artistaMusica = new JTextField();
 
                     JPanel panelMusica = new JPanel();
                     panelMusica.setLayout(new GridLayout(6, 2));
@@ -69,6 +70,8 @@ import java.awt.event.ActionListener;
                     panelMusica.add(generoMusica);
                     panelMusica.add(new JLabel("Ano:"));
                     panelMusica.add(anoMusica);
+                    panelMusica.add(new JLabel("Artista:"));
+                    panelMusica.add(artistaMusica);
 
                     int resultMusica = JOptionPane.showConfirmDialog(null, panelMusica, "Adicionar Música", JOptionPane.OK_CANCEL_OPTION);
 
@@ -77,10 +80,11 @@ import java.awt.event.ActionListener;
                         int durationMusic = Integer.parseInt(duracaoMusica.getText());
                         String genreMusic = generoMusica.getText();
                         int yearMusic = Integer.parseInt(anoMusica.getText());
+                        String artistaMusic = artistaMusica.getText();
 
-//                        Musica musica = new Musica(titleMusic, artista, durationMusic, genreMusic, yearMusic);
-//                        Writer.adicionarMusicaEmArquivo(musica, album);
-//                        musica.adicionarMusicaAoAlbum(album, musica);
+                        MusicaPlaylist musicaPlaylist = new MusicaPlaylist(titleMusic, durationMusic, genreMusic, yearMusic, artistaMusic);
+                        Writer.adicionarMusicaPlaylistEmArquivo(musicaPlaylist, playlist);
+                        playlist.adicionarMusicaPlaylist(musicaPlaylist);
 
                         int continuar = JOptionPane.showConfirmDialog(null, "Deseja adicionar mais músicas?", "Adicionar Música", JOptionPane.YES_NO_OPTION);
 
@@ -91,7 +95,9 @@ import java.awt.event.ActionListener;
                         adicionarMaisMusicas = false;
                     }
                 }
-            Writer.adicionarOuvinteEmArquivo(ouvinte);
+
+                Writer.adicionarOuvinteEmArquivo(ouvinte);
+                Writer.adicionarPlaylistEmArquivo(playlist);
 
             JOptionPane.showMessageDialog(null,"Usuario Criado");
             frame.dispose();

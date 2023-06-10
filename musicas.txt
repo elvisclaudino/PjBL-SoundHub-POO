@@ -25,4 +25,24 @@ Genero: trap
 Duração: 300
 Duração: 2012
 Album: Trtap
+=============================================Nome: elvis
+Artista: elvis
+Genero: brasil
+Duração: 300
+Duração: 2003
+Single
+=============================================
+Nome: um dois tres
+Artista: elvis
+Genero: trap
+Duração: 300
+Duração: 2003
+Single
+=============================================
+Nome: elvis
+Artista: elvis
+Genero: trap
+Duração: 340
+Duração: 2003
+Single
 =============================================
