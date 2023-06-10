@@ -1,0 +1,7 @@
+Nome: um dois
+Artista: elvis
+Músicas da playlist: 
+- um dois tres - 300s
+- elvis - 340s
+Duração: 0s
+=============================================
