@@ -1,8 +1,0 @@
-Nome: album1
-Artista: elvis
-Músicas do album: 
-- musica1 - 200s
-- musica2 - 230s
-- musica3 - 300s
-Duração: 730
-=============================================

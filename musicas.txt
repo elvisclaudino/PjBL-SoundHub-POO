@@ -19,3 +19,10 @@ Duração: 300
 Duração: 2019
 Album: album1
 =============================================
+Nome: trapizin
+Artista: Elvios
+Genero: trap
+Duração: 300
+Duração: 2012
+Album: Trtap
+=============================================
