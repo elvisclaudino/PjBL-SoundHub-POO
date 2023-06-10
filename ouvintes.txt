@@ -1,0 +1,15 @@
+Nome: Elvis
+Idade: 19
+Gênero: Masculino
+Nacionalidade: Brasileiro
+=============================================
+Nome: elvisin
+Idade: 19
+Gênero: Masculino
+Nacionalidade: 2019
+=============================================
+Nome: elvis
+Idade: 19
+Gênero: Feminino
+Nacionalidade: brasileiro
+=============================================

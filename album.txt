@@ -1,0 +1,6 @@
+Nome: elvis
+Artista: elvis
+Músicas do album: 
+- elvis - 20s
+Duração: 20s
+=============================================

@@ -8,3 +8,8 @@ Idade: 19
 Gênero: Masculino
 Nacionalidade: Jamaioca
 =============================================
+Nome: elvis
+Idade: 12
+Gênero: Masculino
+Nacionalidade: brasil
+=============================================

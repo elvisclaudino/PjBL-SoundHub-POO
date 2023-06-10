@@ -4,7 +4,6 @@ import java.util.ArrayList;
 public class Playlist extends Conteudo{
     private Ouvinte ouvinte;
     private ArrayList<Musica> musicas;
-
     private int duracao;
 
     public Playlist(String nome, String genero, int anoDeLancamento, Ouvinte ouvinte) {
@@ -39,5 +38,9 @@ public class Playlist extends Conteudo{
     @Override
     public int getDuracao() {
         return duracao;
+    }
+
+    public void adicionarPlaylistAoArtista(Ouvinte ouvinte, Playlist playlist) {
+        ouvinte.adicionarPlaylist(playlist);
     }
 }
