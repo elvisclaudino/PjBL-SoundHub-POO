@@ -23,11 +23,6 @@ public class Album extends Conteudo {
     }
 
     @Override
-    public ArrayList<MusicaPlaylist> obterListaMusicasPlaylist() {
-        return null;
-    }
-
-    @Override
     public void setDuracao() {
         int duracao = 0;
         for (Musica musica : obterListaMusicas()) {

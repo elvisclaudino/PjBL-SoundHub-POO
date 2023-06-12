@@ -129,7 +129,7 @@ public class Writer {
             printWriter.println("Nome: " + playlist.getNome());
             printWriter.println("Artista: " + playlist.getOuvinte());
             printWriter.println("Músicas da playlist: ");
-            for (MusicaPlaylist musicaPlaylist : playlist.obterListaMusicasPlaylist()) {
+            for (MusicaPlaylist musicaPlaylist : playlist.obterListaMusicas()) {
                 printWriter.println("- " + musicaPlaylist.getNome() + " - " + musicaPlaylist.getDuracao() + "s");
             }
             printWriter.println("Duração: " + playlist.getDuracao() + "s");

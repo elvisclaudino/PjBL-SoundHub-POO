@@ -3,8 +3,7 @@ import java.util.ArrayList;
 
 public interface Add {
    void adicionarMusica(Musica musica);
-   ArrayList<Musica> obterListaMusicas();
-   ArrayList<MusicaPlaylist> obterListaMusicasPlaylist();
+   ArrayList obterListaMusicas();
    String getNome();
    String getGeneroMusical();
    int getLancamento();

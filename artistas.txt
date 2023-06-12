@@ -1,25 +1,5 @@
 Nome: elvis
 Idade: 19
-Gênero: Masculino
-Nacionalidade: brasileiro
-=============================================
-Nome: Elvios
-Idade: 19
-Gênero: Masculino
-Nacionalidade: Jamaioca
-=============================================
-Nome: elvis
-Idade: 12
-Gênero: Masculino
-Nacionalidade: brasil
-=============================================
-Nome: elvis
-Idade: 18
-Gênero: Masculino
-Nacionalidade: brasileiro
-=============================================
-Nome: elvis
-Idade: 19
-Gênero: Masculino
+Gênero: Feminino
 Nacionalidade: brasileiro
 =============================================

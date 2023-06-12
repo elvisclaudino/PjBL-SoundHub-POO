@@ -30,27 +30,22 @@ public class Playlist extends Conteudo{
     }
 
     @Override
-    public ArrayList<Musica> obterListaMusicas() {
-        return musicas;
-    }
-
-    @Override
-    public ArrayList<MusicaPlaylist> obterListaMusicasPlaylist() {
+    public ArrayList<MusicaPlaylist> obterListaMusicas() {
         return musicasPlaylist;
-    }
-
-    @Override
-    public void setDuracao() {
-        int duracao = 0;
-        for (Musica musica : obterListaMusicas()) {
-            duracao += musica.getDuracao();
-        }
-        this.duracao = duracao;
     }
 
     @Override
     public int getDuracao() {
         return duracao;
+    }
+
+    @Override
+    public void setDuracao() {
+        int duracao = 0;
+        for (MusicaPlaylist musicaPlaylist : obterListaMusicas()) {
+            duracao += musicaPlaylist.getDuracao();
+        }
+        this.duracao = duracao;
     }
 
     public void adicionarPlaylistAoOuvinte(Ouvinte ouvinte, Playlist playlist) {

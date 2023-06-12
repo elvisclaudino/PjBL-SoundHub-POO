@@ -1,18 +1,7 @@
-Nome: elvis
+Nome: Elvis
 Artista: elvis
 Músicas do album: 
-- elvis - 20s
-Duração: 20s
-=============================================
-Nome: aaaa
-Artista: elvis
-Músicas do album: 
-- elvis - 300s
-- oioi - 400s
+- oioi - 300s
+- oiiii - 400s
 Duração: 700s
-=============================================
-Nome: 222
-Artista: elvis
-Músicas do album: 
-Duração: 0s
 =============================================
