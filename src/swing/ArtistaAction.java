@@ -32,16 +32,64 @@ public class ArtistaAction implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String nomeArtista = catchNomeArtista.getText();
-        String sexoArtista = (String) catchSexoArtista.getSelectedItem();
-        int idadeArtista = Integer.parseInt(catchIdadeArtista.getText());
-        String apelidoArtista = catchArtistaApelido.getText();
-        String nacionalidadeArtista = catchNacionalidadeArtista.getText();
-        String generoArtista = (String) catchGeneroArtista.getSelectedItem();
+        String nomeArtista;
+        String sexoArtista;
+        int idadeArtista;
+        String apelidoArtista;
+        String nacionalidadeArtista;
+        String generoArtista;
+
+        try {
+            nomeArtista = catchNomeArtista.getText().trim();
+            sexoArtista = (String) catchSexoArtista.getSelectedItem();
+            idadeArtista = Integer.parseInt(catchIdadeArtista.getText());
+            apelidoArtista = catchArtistaApelido.getText();
+            nacionalidadeArtista = catchNacionalidadeArtista.getText();
+            generoArtista = (String) catchGeneroArtista.getSelectedItem();
+
+            if (nomeArtista.isEmpty()) {
+                throw new Exception("O campo nome está vazio!");
+            }
+            if (sexoArtista == "Selecione o seu sexo") {
+                throw new Exception("O campo sexo está vazio!");
+            }
+            if (idadeArtista < 18) {
+                throw new Exception("O artista não pode ser menor de idade!");
+            }
+            if (nacionalidadeArtista.isEmpty()) {
+                throw new Exception("O campo nacionalidade está vazio!");
+            }
+            for (char c : nacionalidadeArtista.toCharArray()) {
+                if (!Character.isLetter(c)) {
+                    throw new Exception("O campo nacionalidade não deve conter números.");
+                }
+            }
+            if (generoArtista == "Selecione o seu genero") {
+                throw new Exception("O campo gênero está vázio");
+            }
+        } catch (Exception error) {
+            if (error instanceof NumberFormatException) {
+                JOptionPane.showMessageDialog(null, "Erro: O valor da idade não é um número válido!", "Erro", JOptionPane.ERROR_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(null, error.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+            }
+            return;
+        }
 
         Artista artista = new Artista(nomeArtista, idadeArtista, sexoArtista, nacionalidadeArtista, generoArtista, apelidoArtista);
         JTextField nomeAlbum = new JTextField();
-        JTextField generoAlbum = new JTextField();
+        JComboBox generoAlbum = new JComboBox(); // Cria uma caixa de seleção
+        generoAlbum.addItem("Selecione..."); //opções
+        generoAlbum.addItem("Sertanejo");
+        generoAlbum.addItem("Trap");
+        generoAlbum.addItem("Funk");
+        generoAlbum.addItem("Pagode");
+        generoAlbum.addItem("Samba");
+        generoAlbum.addItem("Eletronica");
+        generoAlbum.addItem("Pop");
+        generoAlbum.addItem("Kpop");
+        generoAlbum.addItem("Rap");
+        generoAlbum.addItem("Rock");
         JTextField anoAlbum = new JTextField();
 
         JPanel panelAlbum = new JPanel();
@@ -56,9 +104,32 @@ public class ArtistaAction implements ActionListener {
         int result = JOptionPane.showConfirmDialog(null, panelAlbum, "Criar Álbum", JOptionPane.OK_CANCEL_OPTION);
 
         if (result == JOptionPane.OK_OPTION) {
-            String title = nomeAlbum.getText();
-            String genre = generoAlbum.getText();
-            int year = Integer.parseInt(anoAlbum.getText());
+            String title;
+            String genre;
+            int year;
+
+            try {
+                title = nomeAlbum.getText().trim();
+                genre = (String) generoAlbum.getSelectedItem();
+                year = Integer.parseInt(anoAlbum.getText());
+
+                if (title.isEmpty()) {
+                    throw new Exception("O campo título está vazio!");
+                }
+                if (genre == "Selecione...") {
+                    throw new Exception("O campo gênero está vazio!");
+                }
+                if (year > 2023) {
+                    throw new Exception("O ano é inválido");
+                }
+            } catch (Exception error) {
+                if (error instanceof NumberFormatException) {
+                    JOptionPane.showMessageDialog(null, "Erro: O ano não é um número válido!", "Erro", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(null, error.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+                }
+                return;
+            }
 
             Album album = new Album(title, genre, year, artista);
             album.adicionarAlbumAoArtista(artista, album);
@@ -68,7 +139,18 @@ public class ArtistaAction implements ActionListener {
             while (adicionarMaisMusicas) {
                 JTextField nomeMusica = new JTextField();
                 JTextField duracaoMusica = new JTextField();
-                JTextField generoMusica = new JTextField();
+                JComboBox generoMusica = new JComboBox(); // Cria uma caixa de seleção
+                generoMusica.addItem("Selecione..."); //opções
+                generoMusica.addItem("Sertanejo");
+                generoMusica.addItem("Trap");
+                generoMusica.addItem("Funk");
+                generoMusica.addItem("Pagode");
+                generoMusica.addItem("Samba");
+                generoMusica.addItem("Eletronica");
+                generoMusica.addItem("Pop");
+                generoMusica.addItem("Kpop");
+                generoMusica.addItem("Rap");
+                generoMusica.addItem("Rock");
                 JTextField anoMusica = new JTextField();
 
                 JPanel panelMusica = new JPanel();
@@ -85,10 +167,37 @@ public class ArtistaAction implements ActionListener {
                 int resultMusica = JOptionPane.showConfirmDialog(null, panelMusica, "Adicionar Música", JOptionPane.OK_CANCEL_OPTION);
 
                 if (resultMusica == JOptionPane.OK_OPTION) {
-                    String titleMusic = nomeMusica.getText();
-                    int durationMusic = Integer.parseInt(duracaoMusica.getText());
-                    String genreMusic = generoMusica.getText();
-                    int yearMusic = Integer.parseInt(anoMusica.getText());
+                    String titleMusic;
+                    int durationMusic;
+                    String genreMusic;
+                    int yearMusic;
+
+                    try {
+                        titleMusic = nomeMusica.getText().trim();
+                        durationMusic = Integer.parseInt(duracaoMusica.getText());
+                        genreMusic = (String) generoMusica.getSelectedItem();
+                        yearMusic = Integer.parseInt(anoMusica.getText());
+
+                        if (titleMusic.isEmpty()) {
+                            throw new Exception("O campo título está vazio!");
+                        }
+                        if (durationMusic <= 0) {
+                            throw new Exception("A duração é inválida!");
+                        }
+                        if (genreMusic == "Selecione...") {
+                            throw new Exception("O campo gênero está vazio!");
+                        }
+                        if(yearMusic > year) {
+                            throw new Exception("O ano de lançamento da música não pode ser maior que o ano de lançamento do álbum!");
+                        }
+                    } catch (Exception error) {
+                        if (error instanceof NumberFormatException) {
+                            JOptionPane.showMessageDialog(null, "Erro: O valor do ano não é um número válido!", "Erro", JOptionPane.ERROR_MESSAGE);
+                        } else {
+                            JOptionPane.showMessageDialog(null, error.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+                        }
+                        continue;
+                    }
 
                     Musica musica = new Musica(titleMusic, artista, durationMusic, genreMusic, yearMusic);
                     Writer.adicionarMusicaEmArquivo(musica, album);
@@ -107,8 +216,8 @@ public class ArtistaAction implements ActionListener {
             Writer.adicionarArtistaEmArquivo(artista);
             Writer.adicionarAlbumEmArquivo(album);
 
-            JOptionPane.showMessageDialog(null, "Artista e Álbum criados com sucesso!");
+            JOptionPane.showMessageDialog(null, "Artista criado com sucesso!");
+            frame.dispose();
         }
-        frame.dispose();
     }
 }

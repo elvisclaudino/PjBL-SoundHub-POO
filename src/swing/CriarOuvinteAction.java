@@ -213,7 +213,7 @@ import java.awt.event.ActionListener;
                 Writer.adicionarOuvinteEmArquivo(ouvinte);
                 Writer.adicionarPlaylistEmArquivo(playlist);
 
-                JOptionPane.showMessageDialog(null,"Ouvinte Criado com sucesso");
+                JOptionPane.showMessageDialog(null,"Ouvinte criado com sucesso");
                 frame.dispose();
             }
         }

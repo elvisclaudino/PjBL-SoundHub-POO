@@ -13,3 +13,13 @@ Idade: 12
 Gênero: Masculino
 Nacionalidade: brasil
 =============================================
+Nome: elvis
+Idade: 18
+Gênero: Masculino
+Nacionalidade: brasileiro
+=============================================
+Nome: elvis
+Idade: 19
+Gênero: Masculino
+Nacionalidade: brasileiro
+=============================================
