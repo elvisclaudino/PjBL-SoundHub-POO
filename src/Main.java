@@ -23,7 +23,7 @@ public class Main {
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 400);
-        frame.setLayout(new GridLayout(7, 1));
+        frame.setLayout(new GridLayout(8, 1));
 
         JButton artistaButton = new JButton("Criar Artista");
         JButton ouvinteButton = new JButton("Criar Ouvinte");
@@ -31,6 +31,7 @@ public class Main {
         JButton mostrarMusicasButton = new JButton("Mostrar Músicas");
         JButton mostrarAlbunsButton = new JButton("Mostrar Álbuns");
         JButton mostrarOuvintesButton = new JButton("Mostrar Ouvintes");
+        JButton mostrarPlaylistButton = new JButton("Mostrar Playlist");
         JButton sairButton = new JButton("Sair");
 
         artistaButton.addActionListener(new ActionListener() {
@@ -156,6 +157,32 @@ public class Main {
             }
         });
 
+        mostrarPlaylistButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    FileReader fileReader = new FileReader("playlist.txt");
+                    BufferedReader bufferedReader = new BufferedReader(fileReader);
+                    JTextArea textArea = new JTextArea();
+                    String linha;
+                    while ((linha = bufferedReader.readLine()) != null) {
+                        textArea.append(linha + "\n");
+                    }
+                    bufferedReader.close();
+
+                    JScrollPane scrollPane = new JScrollPane(textArea);
+
+                    JFrame janelaPlaylist = new JFrame("Playlist Cadastradas");
+                    janelaPlaylist.getContentPane().add(scrollPane);
+                    janelaPlaylist.setSize(400, 400);
+                    janelaPlaylist.setVisible(true);
+
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
 
         sairButton.addActionListener(new ActionListener() {
             @Override
@@ -170,6 +197,7 @@ public class Main {
         frame.add(mostrarMusicasButton);
         frame.add(mostrarAlbunsButton);
         frame.add(mostrarOuvintesButton);
+        frame.add(mostrarPlaylistButton);
         frame.add(sairButton);
 
         frame.setVisible(true);
