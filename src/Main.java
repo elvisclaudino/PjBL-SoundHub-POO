@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import javax.swing.*;
+import javax.swing.JButton;
 
 public class Main {
 
@@ -22,13 +23,14 @@ public class Main {
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 400);
-        frame.setLayout(new GridLayout(6, 1));
+        frame.setLayout(new GridLayout(7, 1));
 
         JButton artistaButton = new JButton("Criar Artista");
         JButton ouvinteButton = new JButton("Criar Ouvinte");
         JButton mostrarArtistasButton = new JButton("Mostrar Artistas");
         JButton mostrarMusicasButton = new JButton("Mostrar Músicas");
         JButton mostrarAlbunsButton = new JButton("Mostrar Álbuns");
+        JButton mostrarOuvintesButton = new JButton("Mostrar Ouvintes");
         JButton sairButton = new JButton("Sair");
 
         artistaButton.addActionListener(new ActionListener() {
@@ -126,6 +128,35 @@ public class Main {
             }
         });
 
+
+        mostrarOuvintesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    FileReader fileReader = new FileReader("ouvintes.txt");
+                    BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+                    JTextArea textArea = new JTextArea();
+                    String linha;
+                    while ((linha = bufferedReader.readLine()) != null) {
+                        textArea.append(linha + "\n");
+                    }
+                    bufferedReader.close();
+
+                    JScrollPane scrollPane = new JScrollPane(textArea);
+
+                    JFrame janelaOuvinte = new JFrame("Ouvintes Cadastrados");
+                    janelaOuvinte.getContentPane().add(scrollPane);
+                    janelaOuvinte.setSize(400, 400);
+                    janelaOuvinte.setVisible(true);
+
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+
         sairButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -138,6 +169,7 @@ public class Main {
         frame.add(mostrarArtistasButton);
         frame.add(mostrarMusicasButton);
         frame.add(mostrarAlbunsButton);
+        frame.add(mostrarOuvintesButton);
         frame.add(sairButton);
 
         frame.setVisible(true);
