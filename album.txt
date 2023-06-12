@@ -1,13 +1,20 @@
-Nome: Elvis
-Artista: elvis
-Músicas do album: 
-- oioi - 300s
-- oiiii - 400s
-Duração: 700s
-=============================================
 Nome: Buteco
 Artista: Gusttavo Lima
 Músicas do album: 
 - Na hora de amar - 180s
 Duração: 180s
+=============================================
+Nome: Megas do DJ Escobar
+Artista: DJ Escobar
+Músicas do album: 
+- Evoque Prata - 107s
+- Sorrisin de Puto - 106s
+Duração: 213s
+=============================================
+Nome: Tardezinha
+Artista: Thiaguinho
+Músicas do album: 
+- Deixa tudo como tá - 194s
+- Palavras de Amigo - 189s
+Duração: 383s
 =============================================

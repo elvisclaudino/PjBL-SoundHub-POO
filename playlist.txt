@@ -1,13 +1,14 @@
-Nome: elvis
-Artista: elvis
-Músicas da playlist: 
-- olaaa - 300s
-Duração: 300s
-=============================================
 Nome: Mega da Marina
 Artista: Marina
 Músicas da playlist: 
 - Mega do Akon - 123s
 - Mec Life - 126s
 Duração: 249s
+=============================================
+Nome: Só modão do pz
+Artista: Paulo
+Músicas da playlist: 
+- Idiota Favorito - 180s
+- Conveniência - 232s
+Duração: 412s
 =============================================

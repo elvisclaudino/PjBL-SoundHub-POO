@@ -1,15 +1,10 @@
-Nome: elvis
-Idade: 19
-Gênero: Masculino
-Nacionalidade: brasileiro
-=============================================
-Nome: elvis
-Idade: 19
-Gênero: Masculino
-Nacionalidade: brasileiro
-=============================================
 Nome: Marina
 Idade: 18
 Gênero: Feminino
-Nacionalidade: brasileira
+Nacionalidade: Brasileira
+=============================================
+Nome: Paulo
+Idade: 24
+Gênero: Masculino
+Nacionalidade: Brasileiro
 =============================================

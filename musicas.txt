@@ -1,38 +1,3 @@
-Nome: oioi
-Artista: elvis
-Genero: Sertanejo
-Duração: 300
-Duração: 2003
-Album: Elvis
-=============================================
-Nome: oiiii
-Artista: elvis
-Genero: Sertanejo
-Duração: 400
-Duração: 2003
-Album: Elvis
-=============================================
-Nome: elvisin
-Artista: elvis
-Genero: Sertanejo
-Duração: 400
-Duração: 2003
-Single
-=============================================
-Nome: oioiiiii
-Artista: elvis
-Genero: Samba
-Duração: 500
-Duração: 2003
-Single
-=============================================
-Nome: olaaa
-Artista: elvis
-Genero: Sertanejo
-Duração: 300
-Duração: 2003
-Single
-=============================================
 Nome: Na hora de amar
 Artista: Gusttavo Lima
 Genero: Sertanejo
@@ -53,4 +18,46 @@ Genero: Mega Funk
 Duração: 126
 Duração: 2023
 Single
+=============================================
+Nome: Idiota Favorito
+Artista: Murilo Huff
+Genero: Sertanejo
+Duração: 180
+Duração: 2019
+Single
+=============================================
+Nome: Conveniência
+Artista: Hugo e Guilherme
+Genero: Sertanejo
+Duração: 232
+Duração: 2018
+Single
+=============================================
+Nome: Evoque Prata
+Artista: DJ Escobar
+Genero: Mega Funk
+Duração: 107
+Duração: 2022
+Album: Megas do DJ Escobar
+=============================================
+Nome: Sorrisin de Puto
+Artista: DJ Escobar
+Genero: Mega Funk
+Duração: 106
+Duração: 2023
+Album: Megas do DJ Escobar
+=============================================
+Nome: Deixa tudo como tá
+Artista: Thiaguinho
+Genero: Pagode
+Duração: 194
+Duração: 2023
+Album: Tardezinha
+=============================================
+Nome: Palavras de Amigo
+Artista: Thiaguinho
+Genero: Pagode
+Duração: 189
+Duração: 2019
+Album: Tardezinha
 =============================================

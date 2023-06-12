@@ -1,10 +1,15 @@
-Nome: elvis
-Idade: 19
-Gênero: Feminino
-Nacionalidade: brasileiro
-=============================================
 Nome: Gusttavo Lima
 Idade: 31
 Gênero: Masculino
 Nacionalidade: BR
+=============================================
+Nome: DJ Escobar
+Idade: 26
+Gênero: Masculino
+Nacionalidade: Brasileiro
+=============================================
+Nome: Thiaguinho
+Idade: 35
+Gênero: Masculino
+Nacionalidade: Brasileiro
 =============================================
