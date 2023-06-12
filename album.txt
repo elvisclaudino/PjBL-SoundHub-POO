@@ -5,3 +5,9 @@ Músicas do album:
 - oiiii - 400s
 Duração: 700s
 =============================================
+Nome: Buteco
+Artista: Gusttavo Lima
+Músicas do album: 
+- Na hora de amar - 180s
+Duração: 180s
+=============================================

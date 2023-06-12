@@ -83,6 +83,7 @@ public class ArtistaAction implements ActionListener {
         generoAlbum.addItem("Sertanejo");
         generoAlbum.addItem("Trap");
         generoAlbum.addItem("Funk");
+        generoAlbum.addItem("Mega Funk");
         generoAlbum.addItem("Pagode");
         generoAlbum.addItem("Samba");
         generoAlbum.addItem("Eletronica");
@@ -144,6 +145,7 @@ public class ArtistaAction implements ActionListener {
                 generoMusica.addItem("Sertanejo");
                 generoMusica.addItem("Trap");
                 generoMusica.addItem("Funk");
+                generoMusica.addItem("Mega Funk");
                 generoMusica.addItem("Pagode");
                 generoMusica.addItem("Samba");
                 generoMusica.addItem("Eletronica");

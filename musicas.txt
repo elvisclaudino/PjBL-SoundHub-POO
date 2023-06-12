@@ -33,3 +33,24 @@ Duração: 300
 Duração: 2003
 Single
 =============================================
+Nome: Na hora de amar
+Artista: Gusttavo Lima
+Genero: Sertanejo
+Duração: 180
+Duração: 2023
+Album: Buteco
+=============================================
+Nome: Mega do Akon
+Artista: AKON
+Genero: Mega Funk
+Duração: 123
+Duração: 2023
+Single
+=============================================
+Nome: Mec Life
+Artista: PZ
+Genero: Mega Funk
+Duração: 126
+Duração: 2023
+Single
+=============================================

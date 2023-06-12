@@ -8,3 +8,8 @@ Idade: 19
 Gênero: Masculino
 Nacionalidade: brasileiro
 =============================================
+Nome: Marina
+Idade: 18
+Gênero: Feminino
+Nacionalidade: brasileira
+=============================================

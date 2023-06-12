@@ -56,6 +56,7 @@ public class ArtistaGrafica {
         genero.addItem("Sertanejo");
         genero.addItem("Trap");
         genero.addItem("Funk");
+        genero.addItem("Mega Funk");
         genero.addItem("Pagode");
         genero.addItem("Samba");
         genero.addItem("Eletronica");
