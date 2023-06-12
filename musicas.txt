@@ -46,3 +46,80 @@ Duração: 340
 Duração: 2003
 Single
 =============================================
+Nome: 22
+Artista: 22
+Genero: 22
+Duração: 22
+Duração: 22
+Single
+=============================================
+Nome: elvisin
+Artista: brasil
+Genero: Sertanejo
+Duração: 300
+Duração: 2003
+Single
+=============================================
+Nome: elvisin
+Artista: elvisin
+Genero: Sertanejo
+Duração: 300
+Duração: 2003
+Single
+=============================================
+Nome: elvis
+Artista: elvis
+Genero: Sertanejo
+Duração: 300
+Duração: 2003
+Single
+=============================================
+Nome: elvis
+Artista: elvis
+Genero: Sertanejo
+Duração: 300
+Duração: 2003
+Single
+=============================================
+Nome: elvisin
+Artista: elvis
+Genero: Sertanejo
+Duração: 300
+Duração: 2003
+Single
+=============================================
+Nome: oioi
+Artista: elvis
+Genero: Sertanejo
+Duração: 200
+Duração: 2003
+Single
+=============================================
+Nome: aiaiai
+Artista: elvis
+Genero: Sertanejo
+Duração: 200
+Duração: 2003
+Single
+=============================================
+Nome: qqq
+Artista: aaa
+Genero: Sertanejo
+Duração: 300
+Duração: 2003
+Single
+=============================================
+Nome: qqqq
+Artista: 234eee
+Genero: Sertanejo
+Duração: 300
+Duração: 2003
+Single
+=============================================
+Nome: elvis
+Artista: elvis
+Genero: Sertanejo
+Duração: 300
+Duração: 2003
+Single
+=============================================

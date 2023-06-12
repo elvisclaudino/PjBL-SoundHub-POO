@@ -5,3 +5,68 @@ Músicas da playlist:
 - elvis - 340s
 Duração: 0s
 =============================================
+Nome: junin
+Artista: elvis
+Músicas da playlist: 
+- 22 - 22s
+Duração: 0s
+=============================================
+Nome: eu
+Artista: elvis
+Músicas da playlist: 
+Duração: 0s
+=============================================
+Nome: serta
+Artista: elvis
+Músicas da playlist: 
+Duração: 0s
+=============================================
+Nome: serta
+Artista: elvis
+Músicas da playlist: 
+- elvisin - 300s
+Duração: 0s
+=============================================
+Nome: elvis
+Artista: elvis
+Músicas da playlist: 
+- elvis - 300s
+Duração: 0s
+=============================================
+Nome: serta
+Artista: elvis
+Músicas da playlist: 
+- elvis - 300s
+Duração: 0s
+=============================================
+Nome: elvis
+Artista: elvis
+Músicas da playlist: 
+- elvisin - 300s
+Duração: 0s
+=============================================
+Nome: elvisin
+Artista: elvis
+Músicas da playlist: 
+- oioi - 200s
+Duração: 0s
+=============================================
+Nome: elvisin
+Artista: elvis
+Músicas da playlist: 
+- aiaiai - 200s
+Duração: 0s
+=============================================
+Nome: eu
+Artista: elvis
+Músicas da playlist: 
+- qqq - 300s
+- qqqq - 300s
+Duração: 0s
+=============================================
+Nome: elvis
+Artista: elvis
+Músicas da playlist: 
+- elvis - 300s
+Duração: 0s
+=============================================

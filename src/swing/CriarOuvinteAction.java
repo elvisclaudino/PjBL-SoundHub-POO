@@ -66,11 +66,22 @@ import java.awt.event.ActionListener;
 
             Ouvinte ouvinte = new Ouvinte(nomeOuvinte, idadeOuvinte, sexoOuvinte, nacionalidadeOuvinte);
             JTextField nomePlaylist = new JTextField();
-            JTextField generoPlaylist = new JTextField();
+            JComboBox generoPlaylist = new JComboBox(); // Cria uma caixa de seleção
+            generoPlaylist.addItem("Selecione..."); //opções
+            generoPlaylist.addItem("Sertanejo");
+            generoPlaylist.addItem("Trap");
+            generoPlaylist.addItem("Funk");
+            generoPlaylist.addItem("Pagode");
+            generoPlaylist.addItem("Samba");
+            generoPlaylist.addItem("Eletronica");
+            generoPlaylist.addItem("Pop");
+            generoPlaylist.addItem("Kpop");
+            generoPlaylist.addItem("Rap");
+            generoPlaylist.addItem("Rock");
             JTextField anoPlaylist = new JTextField();
 
             JPanel panelAlbum = new JPanel();
-            panelAlbum.setLayout(new GridLayout(4, 2));
+            panelAlbum.setLayout(new GridLayout(3, 2));
             panelAlbum.add(new JLabel("Título:"));
             panelAlbum.add(nomePlaylist);
             panelAlbum.add(new JLabel("Gênero:"));
@@ -81,9 +92,33 @@ import java.awt.event.ActionListener;
             int result = JOptionPane.showConfirmDialog(null, panelAlbum, "Criar Playlist", JOptionPane.OK_CANCEL_OPTION);
 
             if (result == JOptionPane.OK_OPTION) {
-                String title = nomePlaylist.getText();
-                String genre = generoPlaylist.getText();
-                int year = Integer.parseInt(anoPlaylist.getText());
+                String title;
+                String genre;
+                int year;
+
+                try {
+                    title = nomePlaylist.getText().trim();
+                    genre = (String) generoPlaylist.getSelectedItem();
+                    year = Integer.parseInt(anoPlaylist.getText());
+
+                    if (title.isEmpty()) {
+                        throw new Exception("O campo título está vazio!");
+                    }
+                    if (genre == "Selecione...") {
+                        throw new Exception("O campo gênero está vazio!");
+                    }
+                    if (year > 2023) {
+                        throw new Exception("Ano de lançamento inválido!");
+                    }
+
+                } catch (Exception error) {
+                    if (error instanceof NumberFormatException) {
+                        JOptionPane.showMessageDialog(null, "Erro: O valor do ano não é um número válido!", "Erro", JOptionPane.ERROR_MESSAGE);
+                    } else {
+                        JOptionPane.showMessageDialog(null, error.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+                    }
+                    return;
+                }
 
                 Playlist playlist = new Playlist(title, genre, year, ouvinte);
                 playlist.adicionarPlaylistAoOuvinte(ouvinte, playlist);
@@ -93,7 +128,18 @@ import java.awt.event.ActionListener;
                 while (adicionarMaisMusicas) {
                     JTextField nomeMusica = new JTextField();
                     JTextField duracaoMusica = new JTextField();
-                    JTextField generoMusica = new JTextField();
+                    JComboBox generoMusica = new JComboBox(); // Cria uma caixa de seleção
+                    generoMusica.addItem("Selecione..."); //opções
+                    generoMusica.addItem("Sertanejo");
+                    generoMusica.addItem("Trap");
+                    generoMusica.addItem("Funk");
+                    generoMusica.addItem("Pagode");
+                    generoMusica.addItem("Samba");
+                    generoMusica.addItem("Eletronica");
+                    generoMusica.addItem("Pop");
+                    generoMusica.addItem("Kpop");
+                    generoMusica.addItem("Rap");
+                    generoMusica.addItem("Rock");
                     JTextField anoMusica = new JTextField();
                     JTextField artistaMusica = new JTextField();
 
@@ -113,15 +159,46 @@ import java.awt.event.ActionListener;
                     int resultMusica = JOptionPane.showConfirmDialog(null, panelMusica, "Adicionar Música", JOptionPane.OK_CANCEL_OPTION);
 
                     if (resultMusica == JOptionPane.OK_OPTION) {
-                        String titleMusic = nomeMusica.getText();
-                        int durationMusic = Integer.parseInt(duracaoMusica.getText());
-                        String genreMusic = generoMusica.getText();
-                        int yearMusic = Integer.parseInt(anoMusica.getText());
-                        String artistaMusic = artistaMusica.getText();
+                        String titleMusic;
+                        int durationMusic;
+                        String genreMusic;
+                        int yearMusic;
+                        String artistaMusic;
 
-                        MusicaPlaylist musicaPlaylist = new MusicaPlaylist(titleMusic, durationMusic, genreMusic, yearMusic, artistaMusic);
-                        Writer.adicionarMusicaPlaylistEmArquivo(musicaPlaylist, playlist);
-                        playlist.adicionarMusicaPlaylist(musicaPlaylist);
+                        try {
+                            titleMusic = nomeMusica.getText();
+                            durationMusic = Integer.parseInt(duracaoMusica.getText());
+                            genreMusic = (String) generoMusica.getSelectedItem();
+                            yearMusic = Integer.parseInt(anoMusica.getText());
+                            artistaMusic = artistaMusica.getText();
+
+                            if (titleMusic.isEmpty()) {
+                                throw new Exception("O campo título está vazio!");
+                            }
+                            if (durationMusic <= 0) {
+                                throw new Exception("A duração é inválida!");
+                            }
+                            if (genreMusic == "Selecione...") {
+                                throw new Exception("O campo gênero está vazio!");
+                            }
+                            if(yearMusic > 2023) {
+                                throw new Exception("O ano de lançamento é inválido!");
+                            }
+                            if (artistaMusic.isEmpty()) {
+                                throw new Exception("O campo artista está vazio!");
+                            }
+
+                            MusicaPlaylist musicaPlaylist = new MusicaPlaylist(titleMusic, durationMusic, genreMusic, yearMusic, artistaMusic);
+                            Writer.adicionarMusicaPlaylistEmArquivo(musicaPlaylist, playlist);
+                            playlist.adicionarMusicaPlaylist(musicaPlaylist);
+                        } catch (Exception error) {
+                            if (error instanceof NumberFormatException) {
+                                JOptionPane.showMessageDialog(null, "Erro: O valor do ano não é um número válido!", "Erro", JOptionPane.ERROR_MESSAGE);
+                            } else {
+                                JOptionPane.showMessageDialog(null, error.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+                            }
+                            continue;
+                        }
 
                         int continuar = JOptionPane.showConfirmDialog(null, "Deseja adicionar mais músicas?", "Adicionar Música", JOptionPane.YES_NO_OPTION);
 
@@ -136,9 +213,9 @@ import java.awt.event.ActionListener;
                 Writer.adicionarOuvinteEmArquivo(ouvinte);
                 Writer.adicionarPlaylistEmArquivo(playlist);
 
-            JOptionPane.showMessageDialog(null,"Usuario Criado");
-            frame.dispose();
+                JOptionPane.showMessageDialog(null,"Ouvinte Criado com sucesso");
+                frame.dispose();
+            }
         }
-
-    }}
+    }
 
