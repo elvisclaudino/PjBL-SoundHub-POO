@@ -24,7 +24,17 @@ import java.awt.event.ActionListener;
         public void actionPerformed(ActionEvent e){
             String nomeOuvinte = catchNomeOuvinte.getText(); // GET recebe o valor do input
             String sexoOuvinte = (String)catchSexoOuvinte.getSelectedItem();
-            int idadeOuvinte = Integer.parseInt(catchIdadeOuvinte.getText());
+            int idadeOuvinte;
+            try {
+                idadeOuvinte = Integer.parseInt(catchIdadeOuvinte.getText());
+                if (idadeOuvinte < 16) {
+                    JOptionPane.showMessageDialog(null, "A ouvinte deve ter no mínimo 16 anos!", "Erro", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "Digite um valor numérico válido para a idade.", "Erro", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
             String nacionalidadeOuvinte = catchNacionalidadeOuvinte.getText();
 
             Ouvinte ouvinte = new Ouvinte(nomeOuvinte, idadeOuvinte, sexoOuvinte, nacionalidadeOuvinte);
@@ -49,7 +59,7 @@ import java.awt.event.ActionListener;
                 int year = Integer.parseInt(anoPlaylist.getText());
 
                 Playlist playlist = new Playlist(title, genre, year, ouvinte);
-                playlist.adicionarPlaylistAoArtista(ouvinte, playlist);
+                playlist.adicionarPlaylistAoOuvinte(ouvinte, playlist);
 
                 boolean adicionarMaisMusicas = true;
 

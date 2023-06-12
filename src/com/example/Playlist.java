@@ -53,7 +53,7 @@ public class Playlist extends Conteudo{
         return duracao;
     }
 
-    public void adicionarPlaylistAoArtista(Ouvinte ouvinte, Playlist playlist) {
+    public void adicionarPlaylistAoOuvinte(Ouvinte ouvinte, Playlist playlist) {
         ouvinte.adicionarPlaylist(playlist);
     }
 }
