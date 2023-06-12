@@ -22,20 +22,47 @@ import java.awt.event.ActionListener;
         }
         @Override
         public void actionPerformed(ActionEvent e){
-            String nomeOuvinte = catchNomeOuvinte.getText(); // GET recebe o valor do input
-            String sexoOuvinte = (String)catchSexoOuvinte.getSelectedItem();
+            String nomeOuvinte; // GET recebe o valor do input
+            String sexoOuvinte;
             int idadeOuvinte;
+            String nacionalidadeOuvinte;
+
             try {
+                nomeOuvinte = catchNomeOuvinte.getText().trim();
+                sexoOuvinte = (String)catchSexoOuvinte.getSelectedItem();
                 idadeOuvinte = Integer.parseInt(catchIdadeOuvinte.getText());
-                if (idadeOuvinte < 16) {
-                    JOptionPane.showMessageDialog(null, "A ouvinte deve ter no mínimo 16 anos!", "Erro", JOptionPane.ERROR_MESSAGE);
-                    return;
+                nacionalidadeOuvinte = catchNacionalidadeOuvinte.getText();
+
+                if (nomeOuvinte.isEmpty()) {
+                    throw new Exception("O campo nome está vazio!");
                 }
-            } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(null, "Digite um valor numérico válido para a idade.", "Erro", JOptionPane.ERROR_MESSAGE);
+                for (char c : nomeOuvinte.toCharArray()) {
+                    if (!Character.isLetter(c)) {
+                        throw new Exception("O campo nome não deve conter números.");
+                    }
+                }
+                if (sexoOuvinte == "Selecione o seu sexo") {
+                    throw new Exception("O campo sexo está vazio!");
+                }
+                if (idadeOuvinte < 16) {
+                    throw new Exception("O ouvinte deve ter mais de 16 anos!");
+                }
+                if (nacionalidadeOuvinte.isEmpty()) {
+                    throw new Exception("O campo nacionalidade está vazio!");
+                }
+                for (char c : nacionalidadeOuvinte.toCharArray()) {
+                    if (!Character.isLetter(c)) {
+                        throw new Exception("O campo nacionalidade não deve conter números.");
+                    }
+                }
+            } catch (Exception error) {
+                if (error instanceof NumberFormatException) {
+                    JOptionPane.showMessageDialog(null, "Erro: O valor da idade não é um número válido!", "Erro", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(null, error.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+                }
                 return;
             }
-            String nacionalidadeOuvinte = catchNacionalidadeOuvinte.getText();
 
             Ouvinte ouvinte = new Ouvinte(nomeOuvinte, idadeOuvinte, sexoOuvinte, nacionalidadeOuvinte);
             JTextField nomePlaylist = new JTextField();
